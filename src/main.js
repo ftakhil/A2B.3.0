@@ -63,7 +63,7 @@ function initMobileMenu() {
 }
 
 /**
- * Navbar background on scroll — adds `.scrolled` class.
+ * Navbar background on scroll and dynamic color adapting based on section background.
  */
 function initNavScroll() {
   const navbar = document.getElementById('navbar');
@@ -74,11 +74,31 @@ function initNavScroll() {
   const onScroll = () => {
     if (!ticking) {
       window.requestAnimationFrame(() => {
+        // Scrolled styling
         if (window.scrollY > 60) {
           navbar.classList.add('scrolled');
         } else {
           navbar.classList.remove('scrolled');
         }
+
+        // Dynamic light/dark mode adapting
+        const lightSections = document.querySelectorAll('.how-we-work-section, .new-white-section');
+        let isOverLightSection = false;
+        const checkY = 40; // check color roughly halfway down the navbar
+
+        lightSections.forEach(sec => {
+          const rect = sec.getBoundingClientRect();
+          if (rect.top <= checkY && rect.bottom >= checkY) {
+            isOverLightSection = true;
+          }
+        });
+
+        if (isOverLightSection) {
+          navbar.classList.add('light-mode');
+        } else {
+          navbar.classList.remove('light-mode');
+        }
+
         ticking = false;
       });
       ticking = true;
@@ -86,6 +106,8 @@ function initNavScroll() {
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
+  // Trigger once on load to set initial state
+  onScroll();
 }
 
 /**
@@ -127,6 +149,29 @@ function initDarkTabs() {
   });
 }
 
+/**
+ * Process Accordion — toggles the process cards in the white section.
+ */
+function initProcessAccordion() {
+  const items = document.querySelectorAll('.process-item');
+  if (!items.length) return;
+
+  items.forEach(item => {
+    const header = item.querySelector('.process-item-header');
+    header.addEventListener('click', () => {
+      const isExpanded = item.classList.contains('expanded');
+      
+      // Close all items
+      items.forEach(i => i.classList.remove('expanded'));
+      
+      // Open the clicked one if it wasn't already open
+      if (!isExpanded) {
+        item.classList.add('expanded');
+      }
+    });
+  });
+}
+
 // ===== Initialize everything =====
 document.addEventListener('DOMContentLoaded', () => {
   initWordAnimation();
@@ -134,5 +179,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavScroll();
   initEntranceAnimations();
   initDarkTabs();
+  initProcessAccordion();
 });
 
