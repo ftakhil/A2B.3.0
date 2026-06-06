@@ -76,111 +76,208 @@
       </nav>
 
       <!-- ========== CASE STUDY DETAIL CONTENT ========== -->
-      <main class="case-study-detail-page" style="padding: 160px 0 100px; min-height: 100vh;">
-        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 24px;">
-          
-          <a href="/case-study.html" style="color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; display: inline-block;">
-            <i class="fa-solid fa-arrow-left" style="margin-right: 8px;"></i> Back to Case Studies
-          </a>
-
-          <h1 style="font-family: var(--font-heading); font-size: 3.5rem; margin-bottom: 24px;">AI-Powered WhatsApp Medical Consultation Automation System</h1>
-          
-          <div style="display: flex; gap: 40px; margin-bottom: 60px; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 24px 0; flex-wrap: wrap;">
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Industry</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">Healthcare & Medical Services</p>
-            </div>
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Scale</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">Multi-Hospital Network</p>
-            </div>
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Tech Stack</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">n8n, Gemini AI, WhatsApp API</p>
+      <main class="case-study-detail-page">
+        
+        <!-- Hero Section -->
+        <section class="cs-detail-hero">
+          <div class="cs-detail-hero-content">
+            <a href="/case-study.html" class="cs-hero-breadcrumbs">&larr; All case studies</a>
+            <span class="cs-section-label" style="color: rgba(255,255,255,0.7); margin-bottom: 24px;">Healthcare & Medical Services - Case Study</span>
+            <h1 class="cs-hero-title">AI-Powered WhatsApp Medical Consultation Automation System</h1>
+            <p class="cs-hero-subtitle">How a multilingual, multimodal WhatsApp agent handles 200+ daily patient inquiries automatically, managing documents and CRM updates without manual staff involvement.</p>
+            
+            <div class="cs-hero-meta-grid">
+              <div class="cs-meta-block">
+                <span>Client</span>
+                <strong>Multi-Hospital Network</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Industry</span>
+                <strong>Healthcare</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Headline Result</span>
+                <strong class="highlight">24/7 Operations</strong>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div class="cs-content" style="line-height: 1.8; font-size: 1.1rem; color: rgba(255,255,255,0.8);">
-
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">The Challenge</h2>
-            <p style="margin-bottom: 20px;">A leading healthcare provider operating multiple hospitals across a major Indian region faced a critical challenge: patients needed a frictionless system to access medical consultation services. Their existing process required users to install apps or navigate complex websites—barriers that significantly reduced engagement, especially among the general population who prefer simple WhatsApp-based communication.</p>
-            <p style="margin-bottom: 20px;">Managing 100–200+ daily inquiries manually was time-consuming and unsustainable. Scaling to 500–2000 daily inquiries would require a large team. Medical documents, voice notes, and text messages arrived scattered across channels, leading to manual data entry and inconsistent records.</p>
-
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">The Solution</h2>
-            <p style="margin-bottom: 20px;">A2B built a multilingual, multimodal WhatsApp automation system powered by n8n, Gemini AI, and WhatsApp Business API, enabling patients to start consultations instantly through text, voice, or document uploads. The solution handles 100–200+ daily inquiries automatically, manages medical documents, collects structured patient information, and logs everything into a centralized database—without any manual staff involvement.</p>
+        <!-- Main Body -->
+        <section class="cs-detail-wrapper">
+          <div class="cs-detail-grid">
             
-            <img src="/assets/casestudy/medical_con/medical_consultation_architecture.png" alt="System Architecture & Data Flow: Multimodal WhatsApp Consultation Pipeline" style="width: 100%; border-radius: 12px; margin: 40px 0;" />
-            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: -30px; margin-bottom: 40px;">System Architecture & Data Flow: Multimodal WhatsApp Consultation Pipeline</p>
+            <!-- Sticky Sidebar (Receipts) -->
+            <aside class="cs-sticky-sidebar">
+              <div class="cs-receipts-box">
+                <h4 class="cs-receipts-title">Receipts</h4>
+                <div class="cs-receipt-item">
+                  <strong>Zero Manual Admin Work</strong>
+                  <p>100–200+ daily inquiries handled completely automatically.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Massive Scalability</strong>
+                  <p>System scales from 200 to 2000+ patients/day without additional staff.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Multi-Modal Accessibility</strong>
+                  <p>Supports English/Malayalam voice notes and document uploads natively in WhatsApp.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Organized Data</strong>
+                  <p>Doctors receive clean CRM data instead of scattered chats.</p>
+                </div>
+              </div>
+            </aside>
 
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 1: Multi-Modal Input Processing</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> Incoming message via WhatsApp webhook triggers the system to classify user input intelligently.</p>
-            
-            <p style="margin-bottom: 10px;"><strong>Text Message Processing:</strong> Text messages are sent directly to the AI agent for natural conversation flow and data collection.</p>
-            
-            <p style="margin-bottom: 10px;"><strong>Voice Message Transcription:</strong> Voice messages are downloaded from WhatsApp, transcribed to text using Gemini's audio API, and fed to the AI agent. Supports multilingual speech (English + Malayalam) enabling elderly users and patients with limited literacy to interact naturally.</p>
-            
-            <p style="margin-bottom: 20px;"><strong>Document Upload & Management:</strong> Prescriptions, lab reports, PDFs, images, and scans trigger a dedicated document pipeline for storage, tracking, and patient record updates.</p>
+            <!-- Right Article Content -->
+            <article class="cs-article-content">
+              
+              <section>
+                <span class="cs-section-label">The Challenge</span>
+                <h2>Complex apps and websites were a barrier for the general population.</h2>
+                <p>A leading healthcare provider operating multiple hospitals across a major Indian region faced a critical challenge: patients needed a frictionless system to access medical consultation services. Their existing process required users to install apps or navigate complex websites—barriers that significantly reduced engagement, especially among the general population who prefer simple WhatsApp-based communication.</p>
+                <p>Managing 100–200+ daily inquiries manually was time-consuming and unsustainable. Scaling to 500–2000 daily inquiries would require a large team. Medical documents, voice notes, and text messages arrived scattered across channels, leading to manual data entry and inconsistent records.</p>
+              </section>
 
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 2: Conversational AI Agent with Bilingual Support</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> AI agent powered by Gemini manages the consultation intake and patient data collection.</p>
-            
-            <p style="margin-bottom: 10px;"><strong>Multilingual Support (English & Malayalam):</strong> Patients choose their language at the start—AI maintains it throughout the conversation, ensuring accessibility for all demographics in Kerala.</p>
-            
-            <p style="margin-bottom: 10px;"><strong>Structured Data Collection:</strong> The AI captures:</p>
-            <ul style="margin-bottom: 20px; list-style-type: disc; margin-left: 20px;">
-              <li>Name, age, gender, location</li>
-              <li>Symptoms & medical concerns</li>
-              <li>Hospital preference (across hospital network)</li>
-              <li>Type of service (free opinion, consultation, health checkups, support)</li>
-              <li>Appointment preferences</li>
-              <li>Document status</li>
-            </ul>
+              <section>
+                <span class="cs-section-label">The Solution</span>
+                <h2>A multilingual, multimodal WhatsApp automation system.</h2>
+                <p>A2B built a multilingual, multimodal WhatsApp automation system powered by n8n, Gemini AI, and WhatsApp Business API, enabling patients to start consultations instantly through text, voice, or document uploads. The solution handles 100–200+ daily inquiries automatically, manages medical documents, collects structured patient information, and logs everything into a centralized database—without any manual staff involvement.</p>
 
-            <p style="margin-bottom: 20px;"><strong>Contextual Memory & Safety:</strong> The system retains the last 20 messages to maintain natural, contextual conversations. The AI never gives medical advice—it only guides, collects data, clarifies queries, and prepares patient information for doctors.</p>
+                <h3>Phase 1: Multi-Modal Input Processing</h3>
+                <p><strong>Text & Voice Processing:</strong> Text messages are sent directly to the AI agent. Voice messages are downloaded from WhatsApp, transcribed to text using Gemini's audio API, and fed to the AI agent. Supports multilingual speech (English + Malayalam) enabling elderly users and patients with limited literacy to interact naturally.</p>
+                <p><strong>Document Management:</strong> Prescriptions, lab reports, PDFs, images, and scans trigger a dedicated document pipeline for storage, tracking, and patient record updates.</p>
 
-            <p style="margin-bottom: 20px;"><strong>Real-Time Database Updates:</strong> Every key step updates Google Sheets, automatically building a complete CRM with patient demographics, document links, service selection, hospital choice, consultation status, and timestamps.</p>
+                <h3>Phase 2: Conversational AI Agent with Bilingual Support</h3>
+                <p><strong>Multilingual Support:</strong> Patients choose their language at the start—AI maintains it throughout the conversation, ensuring accessibility for all demographics in Kerala.</p>
+                <p><strong>Structured Data Collection:</strong> The AI captures name, age, symptoms, hospital preference, type of service, appointment preferences, and document status.</p>
+                <p><strong>Contextual Memory & Safety:</strong> The system retains the last 20 messages. The AI never gives medical advice—it only guides, collects data, clarifies queries, and prepares patient information for doctors.</p>
+                <h3>Phase 3: Automated Document Management & Response Delivery</h3>
+                <p>When patients share medical documents, files are downloaded from WhatsApp, uploaded to Google Drive, and links are generated for doctors. The patient database (Google Sheets) is updated, and the patient receives an acknowledgment message.</p>
+                <p>Based on conversation progress, professional WhatsApp messages are automatically sent in the patient's chosen language, providing next steps and offering hospital guidance. The automation eliminates manual data collection and transcription.</p>
+              </section>
 
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 3: Automated Document Management & Response Delivery</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> When patients share medical documents or complete consultation intake.</p>
-            
-            <p style="margin-bottom: 10px;"><strong>Document Organization Pipeline:</strong> When patients share medical documents:</p>
-            <ul style="margin-bottom: 20px; list-style-type: disc; margin-left: 20px;">
-              <li>Files are downloaded from WhatsApp</li>
-              <li>Uploaded to Google Drive in organized folders</li>
-              <li>Drive links are generated for doctors</li>
-              <li>Patient database (Google Sheets) is updated with file metadata</li>
-              <li>Patient receives an acknowledgment message</li>
-            </ul>
+            </article>
+          </div>
+        </section>
 
-            <p style="margin-bottom: 20px;"><strong>Intelligent Response System:</strong> Based on conversation progress, professional WhatsApp messages are automatically sent in the patient's chosen language, confirming collected details, providing next steps, acknowledging documents, and offering hospital guidance.</p>
+        <!-- Under the Hood (Architecture) -->
+        <section class="cs-under-the-hood">
+          <div class="cs-under-the-hood-container">
+            <h2>Under the hood.</h2>
+            <p>The system architecture and data flow for the Multimodal WhatsApp Consultation Pipeline using n8n and Gemini.</p>
+            <img src="/assets/casestudy/medical_con/medical_consultation_architecture.png" alt="System Architecture & Data Flow" />
+          </div>
+        </section>
 
-            <p style="margin-bottom: 20px;"><strong>Zero Manual Admin Work:</strong> The automation eliminates manual data collection, document organization, transcription, database entry, and follow-up messages. 100–200+ inquiries are handled daily with zero operators.</p>
+        <!-- Results Banner -->
+        <section class="cs-results-section">
+          <div class="cs-results-container">
+            <div class="cs-results-left">
+              <h2>Results.</h2>
+              <ul class="cs-results-list">
+                <li><i class="fa-solid fa-check"></i> <div><strong>10x Scalability</strong> — Handle more inquiries without adding staff</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>100%</strong> — Automated patient intake and document sorting</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Bilingual</strong> — Native support for English and Malayalam</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Frictionless</strong> — No app downloads or web portals needed</div></li>
+              </ul>
+            </div>
+            <div class="cs-results-right">
+              <div class="cs-results-card">
+                <div class="circle-decor"></div>
+                <h4>Bottom Line</h4>
+                <div class="huge-metric">24/7</div>
+                <p>Continuous AI-driven patient operations</p>
+                <a href="/contact.html">Want one of these? Book a call &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">Return on Investment</h2>
-            <p style="margin-bottom: 20px;">This system eliminated the single biggest barrier to patient engagement: friction. WhatsApp is the highest adoption channel among Kerala patients. Patients can now start consultations instantly without downloading apps or navigating websites.</p>
-            
-            <p style="margin-bottom: 10px;"><strong>Quantifiable Impact:</strong></p>
-            <ul style="margin-bottom: 20px; list-style-type: disc; margin-left: 20px;">
-              <li><strong>Zero Manual Admin Work:</strong> 100–200+ daily inquiries handled completely automatically</li>
-              <li><strong>Massive Scalability:</strong> System scales from 200 → 2000+ patients/day without hiring additional staff</li>
-              <li><strong>Increased Patient Engagement:</strong> WhatsApp-native experience removes all entry barriers</li>
-              <li><strong>Multi-Modal Accessibility:</strong> Elderly users send voice messages, patients with limited literacy can speak instead of type, all file formats supported</li>
-              <li><strong>Clean Medical Data for Doctors:</strong> Doctors receive complete, organized patient data instead of scattered WhatsApp chats</li>
-              <li><strong>Future-Ready Infrastructure:</strong> Built for easy upgrades to PostgreSQL, automated doctor notifications, appointment scheduling, payment workflows, and patient dashboards</li>
-            </ul>
-
-            <p style="margin-bottom: 20px;">The system transforms patient intake from a bottleneck into an infinite-capacity 24/7 operation, delivering better healthcare access while eliminating operational overhead.</p>
-
-            <blockquote style="border-left: 4px solid var(--accent); padding-left: 20px; margin: 40px 0; font-style: italic; color: #fff;">
-              <p style="margin-bottom: 10px;">"Our client now operates an intelligent, fully automated medical consultation system that scales effortlessly. Patients get instant access to healthcare through their preferred channel (WhatsApp), doctors receive perfectly organized patient data, and the hospital network can handle 10x more inquiries without hiring additional staff."</p>
-              <footer style="font-size: 0.9rem; color: var(--text-secondary);">— Healthcare Operations Team</footer>
+        <!-- Testimonial Section -->
+        <section class="cs-testimonial-section" style="padding: 100px 0; background-color: var(--bg-primary);">
+          <div class="cs-under-the-hood-container" style="text-align: center;">
+            <div class="circle-decor" style="margin: 0 auto 32px auto;"></div>
+            <blockquote style="font-family: var(--font-heading); font-size: 2.2rem; color: #fff; line-height: 1.4; margin-bottom: 32px; font-weight: 300;">
+              "Our client now operates an intelligent, fully automated medical consultation system that scales effortlessly. Patients get instant access to healthcare through their preferred channel, and the hospital network can handle 10x more inquiries without hiring additional staff."
             </blockquote>
-
-            <p style="margin-bottom: 20px; font-weight: 600;">This represents the future of healthcare access in emerging markets: frictionless, multilingual, and infinitely scalable through intelligent automation.</p>
-
+            <footer style="color: var(--accent); font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">— Healthcare Operations Team</footer>
           </div>
+        </section>
 
-        </div>
+        <!-- More Work -->
+        <section class="cs-more-work">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-more-work-header">
+              <h2>More work.</h2>
+              <a href="/case-study.html">View all case studies &rarr;</a>
+            </div>
+            <div class="cs-more-work-grid">
+              
+              <a href="/case-studies/sacred-text-publishing.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Religious & Education</span>
+                    <span>Content Generation</span>
+                  </div>
+                  <div class="cs-more-card-metric">100x</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">AI-Powered Religious Content Video Generator</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/knowledge-agent.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Enterprise</span>
+                    <span>Knowledge Management</span>
+                  </div>
+                  <div class="cs-more-card-metric">80%+</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">Multimodal AI Intake and Knowledge Agent</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/seo-reporting.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Marketing & SEO</span>
+                    <span>Automated Reporting</span>
+                  </div>
+                  <div class="cs-more-card-metric">99%</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">Automated SEO Reporting System</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Final CTA (Surprise Section) -->
+        <section class="cs-ai-native-cta">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-ai-native-box">
+              <div class="circle-decor-large"></div>
+              <h2>Ready to become<br>AI-Native?</h2>
+              <p>Book a 30-minute conversation. We'll map the highest-leverage workflows in your business and tell you whether AI is the right answer.</p>
+              <a href="/contact.html" class="btn-arrow">
+                <span class="btn-label">Get in touch</span>
+                <span class="btn-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <!-- ========== FOOTER ========== -->

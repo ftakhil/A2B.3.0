@@ -73,94 +73,213 @@
       </nav>
 
       <!-- ========== CASE STUDY DETAIL CONTENT ========== -->
-      <main class="case-study-detail-page" style="padding: 160px 0 100px; min-height: 100vh;">
-        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 24px;">
-          
-          <a href="/case-study.html" style="color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; display: inline-block;">
-            <i class="fa-solid fa-arrow-left" style="margin-right: 8px;"></i> Back to Case Studies
-          </a>
-
-          <h1 style="font-family: var(--font-heading); font-size: 3.5rem; margin-bottom: 24px;">Visual Brand Intelligence: The AI-Powered Image Generation & Compliance Suite</h1>
-          
-          <div style="display: flex; gap: 40px; margin-bottom: 60px; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 24px 0; flex-wrap: wrap;">
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Industry</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">Visual Brand Intelligence</p>
-            </div>
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Client</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">Enterprise Visual OS</p>
-            </div>
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Tech Stack</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">n8n, Gemini 2.0 Pro, Nano Banana Pro, Supabase, SAM, Qwen</p>
+      <main class="case-study-detail-page">
+        
+        <!-- Hero Section -->
+        <section class="cs-detail-hero">
+          <div class="cs-detail-hero-content">
+            <a href="/case-study.html" class="cs-hero-breadcrumbs">&larr; All case studies</a>
+            <span class="cs-section-label" style="color: rgba(255,255,255,0.7); margin-bottom: 24px;">Visual Brand Intelligence - Case Study</span>
+            <h1 class="cs-hero-title">Visual Brand Intelligence: The AI-Powered Image Generation & Compliance Suite</h1>
+            <p class="cs-hero-subtitle">How we built a modular n8n ecosystem that acts as a Virtual Creative Director, ensuring brand compliance and photorealistic quality at scale.</p>
+            
+            <div class="cs-hero-meta-grid">
+              <div class="cs-meta-block">
+                <span>Client</span>
+                <strong>Enterprise Visual OS</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Industry</span>
+                <strong>Visual Brand Intelligence</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Headline Result</span>
+                <strong class="highlight">100% Brand Compliance</strong>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div class="cs-content" style="line-height: 1.8; font-size: 1.1rem; color: rgba(255,255,255,0.8);">
-
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">The Challenge</h2>
-            <p style="margin-bottom: 20px;">For high-end brands (think "Old Money," luxury, and generational wealth), "close enough" isn't an option. Manually crafting prompts that maintain consistent lighting, lens physics, and material textures across hundreds of assets is a full-time job.</p>
-            <p style="margin-bottom: 20px;">Furthermore, once an image is generated, verifying it against strict brand guidelines—HEX codes, font styles, and logo placement—usually requires a human designer's eyes. Scaling this process manually is a recipe for burnout and brand dilution.</p>
-
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">The Solution</h2>
-            <p style="margin-bottom: 20px;">A2B engineered a massive, modular n8n ecosystem that acts as a Virtual Creative Director. The workflow takes a raw concept and runs it through a gauntlet of specialized AI agents to ensure the final output isn't just a "pretty picture," but a brand-compliant asset.</p>
-
-            <img src="/assets/casestudy/Visual Brand/image 1.jpeg" alt="Visual Brand Image 1: AI-Powered Generation Asset 1" style="width: 100%; border-radius: 12px; margin: 40px 0;" />
-            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: -30px; margin-bottom: 40px;">AI-Powered Generation Asset 1</p>
-
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 1: The "Mega Prompt" Engine</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> A webhook or chat message initiates the request.</p>
+        <!-- Main Body -->
+        <section class="cs-detail-wrapper">
+          <div class="cs-detail-grid">
             
-            <p style="margin-bottom: 10px;"><strong>Style Fetching:</strong> An AI agent queries the Supabase "Style Vault" to find the closest aesthetic match (e.g., "Editorial Flash" or "35mm Retro").</p>
-            <p style="margin-bottom: 20px;"><strong>Physics Injection:</strong> The "Alpha Prompt" node wraps the user's idea in technical language—lens compression, lighting falloff, and "imperfection systems" (dust, grain, noise) to force photorealism.</p>
+            <!-- Sticky Sidebar (Receipts) -->
+            <aside class="cs-sticky-sidebar">
+              <div class="cs-receipts-box">
+                <h4 class="cs-receipts-title">Receipts</h4>
+                <div class="cs-receipt-item">
+                  <strong>Zero Drift</strong>
+                  <p>100% brand-compliant generated assets that match official guidelines.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Infinite Capacity</strong>
+                  <p>Produces assets at scale without human bottlenecks or burnout.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Photorealistic</strong>
+                  <p>Injected lens physics and imperfection systems for "Old Money" aesthetics.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Auto-Correction</strong>
+                  <p>Automated visual audits with specific fix instructions on failure.</p>
+                </div>
+              </div>
+            </aside>
 
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 2: High-Fidelity Generation</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> Engineered prompt ready for rendering.</p>
-            
-            <p style="margin-bottom: 10px;"><strong>The Render:</strong> The workflow sends the engineered prompt to the Nano Banana Pro model.</p>
-            <p style="margin-bottom: 20px;"><strong>Consistency Check:</strong> The system ensures the output adheres to the "Old Money" global theme—American retro wealth, quiet intimacy, and Architectural Digest-level quality.</p>
+            <!-- Right Article Content -->
+            <article class="cs-article-content">
+              
+              <section>
+                <span class="cs-section-label">The Challenge</span>
+                <h2>For high-end brands, "close enough" isn't an option.</h2>
+                <p>Manually crafting prompts that maintain consistent lighting, lens physics, and material textures across hundreds of assets is a full-time job.</p>
+                <p>Furthermore, once an image is generated, verifying it against strict brand guidelines—HEX codes, font styles, and logo placement—usually requires a human designer's eyes. Scaling this process manually is a recipe for burnout and brand dilution.</p>
+              </section>
 
-            <img src="/assets/casestudy/Visual Brand/image 2.jpeg" alt="Visual Brand Image 2: AI-Powered Generation Asset 2" style="width: 100%; border-radius: 12px; margin: 40px 0;" />
-            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: -30px; margin-bottom: 40px;">AI-Powered Generation Asset 2</p>
+              <section>
+                <span class="cs-section-label">The Solution</span>
+                <h2>A Virtual Creative Director.</h2>
+                <p>A2B engineered a massive, modular n8n ecosystem that acts as a Virtual Creative Director. The workflow takes a raw concept and runs it through a gauntlet of specialized AI agents to ensure the final output isn't just a "pretty picture," but a brand-compliant asset.</p>
 
-            <img src="/assets/casestudy/Visual Brand/image 3.jpeg" alt="Visual Brand Image 3: AI-Powered Generation Asset 3" style="width: 100%; border-radius: 12px; margin: 40px 0;" />
-            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: -30px; margin-bottom: 40px;">AI-Powered Generation Asset 3</p>
+                <h3>Phase 1: The "Mega Prompt" Engine</h3>
+                <p>An AI agent queries the Supabase "Style Vault" to find the closest aesthetic match. The "Alpha Prompt" node then wraps the user's idea in technical language—lens compression, lighting falloff, and "imperfection systems" (dust, grain, noise) to force photorealism.</p>
 
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 3: The Automated Quality Checker</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> Generated image passed for audit.</p>
-            
-            <p style="margin-bottom: 10px;"><strong>Visual Audit:</strong> The generated image is passed to a "Brand Compliance Officer" powered by Gemini.</p>
-            <p style="margin-bottom: 10px;"><strong>Rule Comparison:</strong> It compares the image's dominant colors and styles against the official Brand Guidelines stored in Supabase.</p>
-            <p style="margin-bottom: 20px;"><strong>Pass/Fail:</strong> The system returns a compliance score. If it's a "Fail," it generates a specific instruction to fix the asset—no vague notes, no back-and-forth.</p>
+                <h3>Phase 2: High-Fidelity Generation</h3>
+                <p>The workflow sends the engineered prompt to the Nano Banana Pro model. The system ensures the output adheres to the "Old Money" global theme—American retro wealth, quiet intimacy, and Architectural Digest-level quality.</p>
 
-            <img src="/assets/casestudy/Visual Brand/image 4.jpeg" alt="Visual Brand Image 4: Brand Compliance Audit" style="width: 100%; border-radius: 12px; margin: 40px 0;" />
-            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: -30px; margin-bottom: 40px;">Brand Compliance Audit</p>
+                <div class="cs-image-gallery">
+                  <img src="/assets/casestudy/Visual Brand/image 1.jpeg" alt="AI-Powered Generation Asset 1" />
+                  <img src="/assets/casestudy/Visual Brand/image 2.jpeg" alt="AI-Powered Generation Asset 2" />
+                  <img src="/assets/casestudy/Visual Brand/image 3.jpeg" alt="AI-Powered Generation Asset 3" />
+                </div>
 
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 4: Advanced Segmentation (SAM & Qwen)</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> Brand-compliant image ready for final editing.</p>
-            
-            <p style="margin-bottom: 10px;"><strong>Object Cutting:</strong> Using the SAM (Segment Anything) node, the workflow isolates specific subjects from their backgrounds with precision.</p>
-            <p style="margin-bottom: 20px;"><strong>Precision Masking:</strong> The Qwen node handles complex spatial reasoning to ensure that when subjects are placed in new environments, lighting and shadows integrate seamlessly.</p>
+                <h3>Phase 3: The Automated Quality Checker</h3>
+                <p>The generated image is passed to a "Brand Compliance Officer" powered by Gemini. It compares the image's dominant colors and styles against the official Brand Guidelines stored in Supabase. It returns a compliance score; if it's a "Fail," it generates a specific instruction to fix the asset.</p>
 
-            <img src="/assets/casestudy/Visual Brand/image 5.jpeg" alt="Visual Brand Image 5: Advanced Segmentation Result" style="width: 100%; border-radius: 12px; margin: 40px 0;" />
-            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: -30px; margin-bottom: 40px;">Advanced Segmentation Result</p>
+                <img src="/assets/casestudy/Visual Brand/image 4.jpeg" alt="Brand Compliance Audit" />
 
-            <img src="/assets/casestudy/Visual Brand/image 6.jpeg" alt="Visual Brand Image 6: Final Brand-Ready Export" style="width: 100%; border-radius: 12px; margin: 40px 0;" />
-            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: -30px; margin-bottom: 40px;">Final Brand-Ready Export</p>
+                <h3>Phase 4: Advanced Segmentation (SAM & Qwen)</h3>
+                <p>Using the SAM (Segment Anything) node, the workflow isolates specific subjects from their backgrounds with precision. The Qwen node handles complex spatial reasoning to ensure that when subjects are placed in new environments, lighting and shadows integrate seamlessly.</p>
 
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">Return on Investment</h2>
-            <p style="margin-bottom: 20px;">A complete visual autopilot. By moving from "guessing" to "engineering" images, brands save hundreds of hours in creative direction and revision cycles. It ensures that every single pixel published—whether for a social post or an enterprise report—feels intentionally crafted and perfectly on-brand.</p>
-            
-            <blockquote style="border-left: 4px solid var(--accent); padding-left: 20px; margin: 40px 0; font-style: italic; color: #fff;">
-              <p style="margin-bottom: 10px;">"It transforms brand image generation from a bottleneck into an infinite-capacity automation engine, preserving creative vision while enabling unlimited production at zero additional cost."</p>
-              <footer style="font-size: 0.9rem; color: var(--text-secondary);">— A2B AI Technologies</footer>
+                <div class="cs-image-gallery">
+                  <img src="/assets/casestudy/Visual Brand/image 5.jpeg" alt="Advanced Segmentation Result" />
+                  <img src="/assets/casestudy/Visual Brand/image 6.jpeg" alt="Final Brand-Ready Export" />
+                </div>
+
+              </section>
+
+            </article>
+          </div>
+        </section>
+
+        <!-- Results Banner -->
+        <section class="cs-results-section">
+          <div class="cs-results-container">
+            <div class="cs-results-left">
+              <h2>Results.</h2>
+              <ul class="cs-results-list">
+                <li><i class="fa-solid fa-check"></i> <div><strong>100%</strong> — Brand compliance guaranteed</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Zero</strong> — Human creative direction bottlenecks</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Infinite</strong> — Production capacity</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Flawless</strong> — Professional lighting, lens physics & textures</div></li>
+              </ul>
+            </div>
+            <div class="cs-results-right">
+              <div class="cs-results-card">
+                <div class="circle-decor"></div>
+                <h4>Bottom Line</h4>
+                <div class="huge-metric">100%</div>
+                <p>Brand compliance guaranteed</p>
+                <a href="/contact.html">Want one of these? Book a call &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="cs-testimonial-section" style="padding: 100px 0; background-color: var(--bg-primary);">
+          <div class="cs-under-the-hood-container" style="text-align: center;">
+            <div class="circle-decor" style="margin: 0 auto 32px auto;"></div>
+            <blockquote style="font-family: var(--font-heading); font-size: 2.2rem; color: #fff; line-height: 1.4; margin-bottom: 32px; font-weight: 300;">
+              "It transforms brand image generation from a bottleneck into an infinite-capacity automation engine, preserving creative vision while enabling unlimited production at zero additional cost."
             </blockquote>
-
-            <p style="margin-bottom: 20px; font-weight: 600;">Visual Brand Intelligence represents the pinnacle of brand-consistent AI image generation, combining artistic soul with technical precision.</p>
-
+            <footer style="color: var(--accent); font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">— A2B AI Technologies</footer>
           </div>
-        </div>
+        </section>
+
+        <!-- More Work -->
+        <section class="cs-more-work">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-more-work-header">
+              <h2>More work.</h2>
+              <a href="/case-study.html">View all case studies &rarr;</a>
+            </div>
+            <div class="cs-more-work-grid">
+              
+              <a href="/case-studies/sacred-text-publishing.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Religious & Education</span>
+                    <span>Content Generation</span>
+                  </div>
+                  <div class="cs-more-card-metric">100x</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">AI-Powered Religious Content Video Generator</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/seo-reporting.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Marketing & SEO</span>
+                    <span>Automated Reporting</span>
+                  </div>
+                  <div class="cs-more-card-metric">99%</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">Automated SEO Reporting System</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/image-generation.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Creative</span>
+                    <span>Image Generation</span>
+                  </div>
+                  <div class="cs-more-card-metric">1000+</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">AI-Powered Brand-Style Image Generation System</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Final CTA (Surprise Section) -->
+        <section class="cs-ai-native-cta">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-ai-native-box">
+              <div class="circle-decor-large"></div>
+              <h2>Ready to become<br>AI-Native?</h2>
+              <p>Book a 30-minute conversation. We'll map the highest-leverage workflows in your business and tell you whether AI is the right answer.</p>
+              <a href="/contact.html" class="btn-arrow">
+                <span class="btn-label">Get in touch</span>
+                <span class="btn-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <!-- ========== FOOTER ========== -->

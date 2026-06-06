@@ -73,79 +73,213 @@
       </nav>
 
       <!-- ========== CASE STUDY DETAIL CONTENT ========== -->
-      <main class="case-study-detail-page" style="padding: 160px 0 100px; min-height: 100vh;">
-        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 24px;">
-          
-          <a href="/case-study.html" style="color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; display: inline-block;">
-            <i class="fa-solid fa-arrow-left" style="margin-right: 8px;"></i> Back to Case Studies
-          </a>
-
-          <h1 style="font-family: var(--font-heading); font-size: 3.5rem; margin-bottom: 24px;">Reddit-to-YouTube Automation</h1>
-          
-          <div style="display: flex; gap: 40px; margin-bottom: 60px; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 24px 0; flex-wrap: wrap;">
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Industry</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">Media & Content Automation</p>
-            </div>
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Client</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">Social Media Brand</p>
-            </div>
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Tech Stack</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">n8n, Gemini, ElevenLabs, HeyGen, YouTube API</p>
-            </div>
-          </div>
-
-          <div class="cs-content" style="line-height: 1.8; font-size: 1.1rem; color: rgba(255,255,255,0.8);">
-
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">The Challenge</h2>
-            <p style="margin-bottom: 20px;">A content-focused media brand approached A2B with a simple goal and a messy process: They wanted to turn high-performing Reddit posts into faceless YouTube videos with talking avatars—on repeat, every day—without hiring scriptwriters, editors, or video staff.</p>
-            <p style="margin-bottom: 20px;">Manually, this meant copying Reddit content, writing a script, recording audio, creating a video, and uploading it. One video could take 1–2 hours — scaling was impossible.</p>
-
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">The Solution</h2>
-            <p style="margin-bottom: 20px;">A2B built a fully automated n8n-based workflow that converts a single Telegram message containing a Reddit link into a ready-to-publish YouTube video. It generates a script, voice-over, avatar video, uploads it to YouTube, and sends the final link back to Telegram.</p>
-
-            <img src="/assets/casestudy/reddit_youtube/red_yt.jpg" alt="System Architecture & Data Flow" style="width: 100%; border-radius: 12px; margin: 40px 0;" />
-            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: -30px; margin-bottom: 40px;">System Architecture & Data Flow</p>
-
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 1: Telegram Trigger & Text Extraction</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> Telegram message with Reddit link triggers the workflow.</p>
-            <p style="margin-bottom: 20px;"><strong>Link Parsing & JSON:</strong> Extracts link, subreddit, postId, and optional user opinion via Edit Fields and Gemini parsing.</p>
-
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 2: Reddit Data Extraction</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> Reddit API nodes fetch post and comment threads.</p>
-            <p style="margin-bottom: 20px;"><strong>Recursive Comment Flattening:</strong> Custom JS flattens threads and returns cleaned comments_data payload.</p>
-
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 3: Script Generation (Gemini)</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> AI agent produces a concise script and title.</p>
-            <p style="margin-bottom: 20px;"><strong>Structured Output Parser:</strong> Produces clean JSON with script and title ready for TTS.</p>
-
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 4: Avatar Video Creation (ElevenLabs + HeyGen)</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> TTS → upload audio → HeyGen render → fetch video.</p>
-            <p style="margin-bottom: 10px;"><strong>Automated TTS:</strong> ElevenLabs generates natural voice-over.</p>
-            <p style="margin-bottom: 20px;"><strong>Avatar Render:</strong> HeyGen creates 720p talking-head video; workflow waits then downloads result.</p>
-
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 5: YouTube Upload & Notification</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> Upload video to YouTube and notify via Telegram.</p>
-            <p style="margin-bottom: 10px;"><strong>Auto Upload:</strong> YouTube node uploads video with AI-generated title.</p>
-            <p style="margin-bottom: 20px;"><strong>Notification:</strong> Telegram notifies user with published link.</p>
-
-            <img src="/assets/casestudy/reddit_youtube/red_yt_N8N.jpg" alt="n8n Workflow Implementation" style="width: 100%; border-radius: 12px; margin: 40px 0;" />
-            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: -30px; margin-bottom: 40px;">n8n Workflow Implementation</p>
-
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">Return on Investment</h2>
-            <p style="margin-bottom: 20px;">Zero marginal costs per video, dozens of videos possible daily, consistent brand voice, single-interface control via Telegram, easily extendable to other languages and channels.</p>
+      <main class="case-study-detail-page">
+        
+        <!-- Hero Section -->
+        <section class="cs-detail-hero">
+          <div class="cs-detail-hero-content">
+            <a href="/case-study.html" class="cs-hero-breadcrumbs">&larr; All case studies</a>
+            <span class="cs-section-label" style="color: rgba(255,255,255,0.7); margin-bottom: 24px;">Media & Content Automation - Case Study</span>
+            <h1 class="cs-hero-title">Reddit-to-YouTube Automation</h1>
+            <p class="cs-hero-subtitle">How we built a fully automated content engine that converts Reddit threads into published YouTube avatar videos via a single Telegram message.</p>
             
-            <blockquote style="border-left: 4px solid var(--accent); padding-left: 20px; margin: 40px 0; font-style: italic; color: #fff;">
-              <p style="margin-bottom: 10px;">"A complete autopilot content engine replacing manual script, TTS, render and upload steps."</p>
-              <footer style="font-size: 0.9rem; color: var(--text-secondary);">— Automation Team</footer>
-            </blockquote>
-
-            <p style="margin-bottom: 20px; font-weight: 600;">Converts Reddit threads into fully-produced YouTube avatar videos with a single Telegram message.</p>
-
+            <div class="cs-hero-meta-grid">
+              <div class="cs-meta-block">
+                <span>Client</span>
+                <strong>Social Media Brand</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Industry</span>
+                <strong>Media & Content</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Headline Result</span>
+                <strong class="highlight">Zero Manual Labor</strong>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <!-- Main Body -->
+        <section class="cs-detail-wrapper">
+          <div class="cs-detail-grid">
+            
+            <!-- Sticky Sidebar (Receipts) -->
+            <aside class="cs-sticky-sidebar">
+              <div class="cs-receipts-box">
+                <h4 class="cs-receipts-title">Receipts</h4>
+                <div class="cs-receipt-item">
+                  <strong>100% Automated</strong>
+                  <p>Replaces manual scriptwriting, TTS rendering, and uploading.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>1-Click Trigger</strong>
+                  <p>Single-interface control via simple Telegram messages.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Zero Marginal Cost</strong>
+                  <p>Scale video production daily without additional hiring.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Consistent Quality</strong>
+                  <p>Maintains brand voice and visual avatars seamlessly.</p>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Right Article Content -->
+            <article class="cs-article-content">
+              
+              <section>
+                <span class="cs-section-label">The Challenge</span>
+                <h2>One video took 1-2 hours manually. Scaling was impossible.</h2>
+                <p>A content-focused media brand approached A2B with a simple goal and a messy process: They wanted to turn high-performing Reddit posts into faceless YouTube videos with talking avatars—on repeat, every day—without hiring scriptwriters, editors, or video staff.</p>
+                <p>Manually, this meant copying Reddit content, writing a script, recording audio, creating a video, and uploading it. One video could take 1–2 hours — scaling was impossible.</p>
+              </section>
+
+              <section>
+                <span class="cs-section-label">The Solution</span>
+                <h2>A complete autopilot content engine.</h2>
+                <p>A2B built a fully automated n8n-based workflow that converts a single Telegram message containing a Reddit link into a ready-to-publish YouTube video. It generates a script, voice-over, avatar video, uploads it to YouTube, and sends the final link back to Telegram.</p>
+
+                <h3>Phase 1: Telegram Trigger & Text Extraction</h3>
+                <p>A simple Telegram message with a Reddit link triggers the workflow. The system extracts the link, subreddit, postId, and optional user opinion via Edit Fields and Gemini parsing.</p>
+                
+                <h3>Phase 2: Reddit Data Extraction</h3>
+                <p>Reddit API nodes fetch the post and comment threads. Custom JavaScript flattens the recursive threads and returns a cleaned comments_data payload for analysis.</p>
+
+                <h3>Phase 3: Script Generation (Gemini)</h3>
+                <p>An AI agent produces a concise script and title based on the extracted content. A Structured Output Parser produces clean JSON with the script and title ready for text-to-speech synthesis.</p>
+
+                <h3>Phase 4: Avatar Video Creation (ElevenLabs + HeyGen)</h3>
+                <p>The workflow triggers a TTS process using ElevenLabs to generate natural voice-over. It then uploads the audio and triggers a HeyGen render to create a 720p talking-head video. The workflow waits, then downloads the final result.</p>
+
+                <h3>Phase 5: YouTube Upload & Notification</h3>
+                <p>The YouTube node automatically uploads the video with the AI-generated title and tags. Finally, the Telegram node notifies the user with the published YouTube link.</p>
+              </section>
+
+            </article>
+          </div>
+        </section>
+
+        <!-- Under the Hood (Architecture) -->
+        <section class="cs-under-the-hood">
+          <div class="cs-under-the-hood-container">
+            <h2>Under the hood.</h2>
+            <p>System Architecture & Data Flow, along with the n8n Workflow Implementation.</p>
+            
+            <img src="/assets/casestudy/reddit_youtube/red_yt.jpg" alt="System Architecture & Data Flow" style="margin-bottom: 40px;" />
+            <img src="/assets/casestudy/reddit_youtube/red_yt_N8N.jpg" alt="n8n Workflow Implementation" />
+          </div>
+        </section>
+
+        <!-- Results Banner -->
+        <section class="cs-results-section">
+          <div class="cs-results-container">
+            <div class="cs-results-left">
+              <h2>Results.</h2>
+              <ul class="cs-results-list">
+                <li><i class="fa-solid fa-check"></i> <div><strong>Zero</strong> — Marginal costs per video</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Unlimited</strong> — Dozens of videos possible daily</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Consistent</strong> — Brand voice and avatar appearance</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Extendable</strong> — Easy to add languages or other social channels</div></li>
+              </ul>
+            </div>
+            <div class="cs-results-right">
+              <div class="cs-results-card">
+                <div class="circle-decor"></div>
+                <h4>Bottom Line</h4>
+                <div class="huge-metric">Zero</div>
+                <p>Manual effort required</p>
+                <a href="/contact.html">Want one of these? Book a call &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="cs-testimonial-section" style="padding: 100px 0; background-color: var(--bg-primary);">
+          <div class="cs-under-the-hood-container" style="text-align: center;">
+            <div class="circle-decor" style="margin: 0 auto 32px auto;"></div>
+            <blockquote style="font-family: var(--font-heading); font-size: 2.2rem; color: #fff; line-height: 1.4; margin-bottom: 32px; font-weight: 300;">
+              "A complete autopilot content engine replacing manual script, TTS, render and upload steps. Converts Reddit threads into fully-produced YouTube avatar videos with a single Telegram message."
+            </blockquote>
+            <footer style="color: var(--accent); font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">— Automation Team</footer>
+          </div>
+        </section>
+
+        <!-- More Work -->
+        <section class="cs-more-work">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-more-work-header">
+              <h2>More work.</h2>
+              <a href="/case-study.html">View all case studies &rarr;</a>
+            </div>
+            <div class="cs-more-work-grid">
+              
+              <a href="/case-studies/sacred-text-publishing.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Religious & Education</span>
+                    <span>Content Generation</span>
+                  </div>
+                  <div class="cs-more-card-metric">100x</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">AI-Powered Religious Content Video Generator</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/medical-consultation.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Healthcare</span>
+                    <span>Automated Intake</span>
+                  </div>
+                  <div class="cs-more-card-metric">24/7</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">AI-Powered WhatsApp Medical Consultation</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/image-generation.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Creative</span>
+                    <span>Image Generation</span>
+                  </div>
+                  <div class="cs-more-card-metric">1000+</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">AI-Powered Brand-Style Image Generation System</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Final CTA (Surprise Section) -->
+        <section class="cs-ai-native-cta">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-ai-native-box">
+              <div class="circle-decor-large"></div>
+              <h2>Ready to become<br>AI-Native?</h2>
+              <p>Book a 30-minute conversation. We'll map the highest-leverage workflows in your business and tell you whether AI is the right answer.</p>
+              <a href="/contact.html" class="btn-arrow">
+                <span class="btn-label">Get in touch</span>
+                <span class="btn-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <!-- ========== FOOTER ========== -->

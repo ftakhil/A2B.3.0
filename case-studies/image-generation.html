@@ -73,100 +73,214 @@
       </nav>
 
       <!-- ========== CASE STUDY DETAIL CONTENT ========== -->
-      <main class="case-study-detail-page" style="padding: 160px 0 100px; min-height: 100vh;">
-        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 24px;">
-          
-          <a href="/case-study.html" style="color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; display: inline-block;">
-            <i class="fa-solid fa-arrow-left" style="margin-right: 8px;"></i> Back to Case Studies
-          </a>
-
-          <h1 style="font-family: var(--font-heading); font-size: 3.5rem; margin-bottom: 24px;">AI-Powered Brand-Style Image Generation System</h1>
-          
-          <div style="display: flex; gap: 40px; margin-bottom: 60px; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 24px 0; flex-wrap: wrap;">
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Industry</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">Creative & Brand Design</p>
-            </div>
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Client</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">Premium Creative Agency</p>
-            </div>
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Tech Stack</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">n8n, Gemini AI, Supabase, Multi-Model APIs</p>
+      <main class="case-study-detail-page">
+        
+        <!-- Hero Section -->
+        <section class="cs-detail-hero">
+          <div class="cs-detail-hero-content">
+            <a href="/case-study.html" class="cs-hero-breadcrumbs">&larr; All case studies</a>
+            <span class="cs-section-label" style="color: rgba(255,255,255,0.7); margin-bottom: 24px;">Creative & Brand Design - Case Study</span>
+            <h1 class="cs-hero-title">AI-Powered Brand-Style Image Generation System</h1>
+            <p class="cs-hero-subtitle">How a custom AI pipeline learns a brand's aesthetic DNA to generate unlimited, perfectly consistent cinematic images on demand.</p>
+            
+            <div class="cs-hero-meta-grid">
+              <div class="cs-meta-block">
+                <span>Client</span>
+                <strong>Premium Creative Agency</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Industry</span>
+                <strong>Creative & Design</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Headline Result</span>
+                <strong class="highlight">1000+ images/day</strong>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div class="cs-content" style="line-height: 1.8; font-size: 1.1rem; color: rgba(255,255,255,0.8);">
-
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">The Challenge</h2>
-            <p style="margin-bottom: 20px;">A fast-growing creative brand needed a way to generate unlimited on-brand images without manually crafting style prompts for every request. Their design team had built a signature visual identity across 15+ reference images but replicating that same cinematography, lighting language, and texture identity was inconsistent and time-consuming.</p>
-            <p style="margin-bottom: 20px;">They wanted a solution that could learn the brand's style, store it, and automatically apply it to any new user-generated prompt—all while maintaining aesthetic consistency, camera logic, and the brand's "old-money, luxury, retro" vibe.</p>
-
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">The Solution</h2>
-            <p style="margin-bottom: 20px;">Our team built a fully automated style-extraction and image-generation engine powered by n8n, Gemini AI, Supabase, and multi-model image generation APIs, delivering 100% consistent brand-style images on demand.</p>
-
-            <img src="/assets/casestudy/imagegeneration/image_er.jpg" alt="System Architecture & Data Flow" style="width: 100%; border-radius: 12px; margin: 40px 0;" />
-            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: -30px; margin-bottom: 40px;">System Architecture & Data Flow</p>
-
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 1: Perfect Style Extraction</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> System ingests 15+ reference images and performs deep cinematic style extraction using Gemini's multimodal capabilities.</p>
+        <!-- Main Body -->
+        <section class="cs-detail-wrapper">
+          <div class="cs-detail-grid">
             
-            <p style="margin-bottom: 10px;"><strong>High-precision camera logic breakdown:</strong> Lens compression, framing rhythm, angle behavior, bloom, contrast physics.</p>
-            <p style="margin-bottom: 10px;"><strong>Lighting identity analysis:</strong> Warm sunset hues, side-lit highlights, retro glow falloff.</p>
-            <p style="margin-bottom: 10px;"><strong>Texture & material fingerprinting:</strong> Wood varnish details, fabric tension, micro-scratches, oil-sheen physics.</p>
-            <p style="margin-bottom: 20px;"><strong>Imperfection pattern capture:</strong> Analog dust, chromatic fringe, bloom leaks, atmospheric haze.</p>
-            <p style="margin-bottom: 20px;"><strong>Brand Visual DNA Library:</strong> Each extracted style is stored in Supabase as structured text linked to the image filename, creating a permanent repository of the brand's aesthetic DNA.</p>
+            <!-- Sticky Sidebar (Receipts) -->
+            <aside class="cs-sticky-sidebar">
+              <div class="cs-receipts-box">
+                <h4 class="cs-receipts-title">Receipts</h4>
+                <div class="cs-receipt-item">
+                  <strong>Zero Manual Effort</strong>
+                  <p>Style extraction and camera logic are handled completely automatically.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Perfect Consistency</strong>
+                  <p>Every output carries the same "old-money, generational wealth" aesthetic.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Unlimited Scalability</strong>
+                  <p>Teams can generate 1000+ images/day with zero additional cost.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Unified Brand Language</strong>
+                  <p>Ensures the brand's entire catalog looks handcrafted by one creative director.</p>
+                </div>
+              </div>
+            </aside>
 
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 2: Object Recognition for Context Matching</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> When a user submits a prompt, the system automatically scans the entire stored dataset.</p>
-            <p style="margin-bottom: 10px;"><strong>Semantic Content Analysis:</strong> Finds the closest matching reference image and extracts its semantic content.</p>
-            <p style="margin-bottom: 10px;"><strong>Best-Aligned Style Selection:</strong> Returns the best-aligned style description ensuring every new output matches the correct style segment, not a random generic one.</p>
-            <p style="margin-bottom: 10px;"><strong>Intelligent Matching Technology:</strong> The model uses:</p>
-            <ul style="margin-bottom: 20px; list-style-type: disc; margin-left: 20px;">
-              <li>Gemini semantic vision analysis</li>
-              <li>Supabase database lookup</li>
-              <li>A reasoning layer that selects the single best reference match (not multiple)</li>
-            </ul>
+            <!-- Right Article Content -->
+            <article class="cs-article-content">
+              
+              <section>
+                <span class="cs-section-label">The Challenge</span>
+                <h2>Replicating lighting language and texture identity was inconsistent.</h2>
+                <p>A fast-growing creative brand needed a way to generate unlimited on-brand images without manually crafting style prompts for every request. Their design team had built a signature visual identity across 15+ reference images but replicating that same cinematography, lighting language, and texture identity was inconsistent and time-consuming.</p>
+                <p>They wanted a solution that could learn the brand's style, store it, and automatically apply it to any new user-generated prompt—all while maintaining aesthetic consistency, camera logic, and the brand's "old-money, luxury, retro" vibe.</p>
+              </section>
 
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 3: Final Image Generation Engine</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> Once the system has compiled user prompt, matching style, aesthetic motifs, imperfection profile, camera DNA, and lighting rules.</p>
-            <p style="margin-bottom: 10px;"><strong>Alpha-Prompt Engineering:</strong> The system merges all elements into a single Alpha-Prompt, built by an advanced prompt-engineering agent inside n8n.</p>
-            <p style="margin-bottom: 10px;"><strong>Multi-Model Generation:</strong> The Alpha-Prompt is sent simultaneously to multiple models:</p>
-            <ul style="margin-bottom: 20px; list-style-type: disc; margin-left: 20px;">
-              <li>Google Gemini 2.5 Flash Image</li>
-              <li>Imagen 4</li>
-              <li>Nano Banana Pro</li>
-              <li>Ideogram V3</li>
-              <li>Grok Imagine</li>
-            </ul>
-            <p style="margin-bottom: 10px;"><strong>Consistent Brand Identity:</strong> Each model returns a variation with the same brand identity preserved.</p>
-            <p style="margin-bottom: 20px;"><strong>Automated Asset Delivery:</strong> The best output(s) are uploaded to Google Drive, ready for delivery.</p>
+              <section>
+                <span class="cs-section-label">The Solution</span>
+                <h2>A fully automated style-extraction and generation engine.</h2>
+                <p>Our team built a fully automated style-extraction and image-generation engine powered by n8n, Gemini AI, Supabase, and multi-model image generation APIs, delivering 100% consistent brand-style images on demand.</p>
 
-            <img src="/assets/casestudy/imagegeneration/image_n8n.jpg" alt="n8n Workflow Implementation" style="width: 100%; border-radius: 12px; margin: 40px 0;" />
-            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: -30px; margin-bottom: 40px;">n8n Workflow Implementation</p>
+                <h3>Phase 1: Perfect Style Extraction</h3>
+                <p>The system ingests 15+ reference images and performs deep cinematic style extraction using Gemini's multimodal capabilities, focusing on:</p>
+                <ul>
+                  <li><strong>High-precision camera logic breakdown:</strong> Lens compression, framing rhythm, angle behavior, bloom, contrast physics.</li>
+                  <li><strong>Lighting identity analysis:</strong> Warm sunset hues, side-lit highlights, retro glow falloff.</li>
+                  <li><strong>Texture & material fingerprinting:</strong> Wood varnish details, fabric tension, micro-scratches, oil-sheen physics.</li>
+                  <li><strong>Imperfection pattern capture:</strong> Analog dust, chromatic fringe, bloom leaks, atmospheric haze.</li>
+                </ul>
+                <p>Each extracted style is stored in Supabase as structured text linked to the image filename, creating a permanent repository of the brand's aesthetic DNA.</p>
 
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">Return on Investment</h2>
-            <p style="margin-bottom: 20px;">This system transforms a brand's scattered visual identity into a centralized, automated engine capable of generating endless on-brand images with perfect cinematic consistency.</p>
-            
-            <p style="margin-bottom: 10px;"><strong>Quantifiable Impact:</strong></p>
-            <ul style="margin-bottom: 20px; list-style-type: disc; margin-left: 20px;">
-              <li><strong>Zero Manual Effort:</strong> Style extraction and camera logic are handled completely automatically</li>
-              <li><strong>Perfect Consistency:</strong> Every output carries the same "old-money, generational wealth, retro luxury" aesthetic</li>
-              <li><strong>Unlimited Scalability:</strong> Teams can generate 1000+ images/day with zero additional cost or design effort</li>
-              <li><strong>Unified Brand Language:</strong> Style extraction and motif consistency ensure the brand's entire catalog looks handcrafted by one creative director</li>
-              <li><strong>Multi-Model Robustness:</strong> If one model fails or delays, parallel pipelines guarantee delivery</li>
-            </ul>
+                <h3>Phase 2: Object Recognition for Context Matching</h3>
+                <p>When a user submits a prompt, the system automatically scans the entire stored dataset, finds the closest matching reference image, and extracts its semantic content. It returns the best-aligned style description ensuring every new output matches the correct style segment.</p>
 
-            <blockquote style="border-left: 4px solid var(--accent); padding-left: 20px; margin: 40px 0; font-style: italic; color: #fff;">
-              <p style="margin-bottom: 10px;">"This system transforms brand image generation from a bottleneck into an infinite-capacity automation engine, preserving creative vision while enabling unlimited production at zero additional cost."</p>
-              <footer style="font-size: 0.9rem; color: var(--text-secondary);">— Creative Direction Team</footer>
+
+                <h3>Phase 3: Final Image Generation Engine</h3>
+                <p>The system merges the user prompt, matching style, aesthetic motifs, imperfection profile, camera DNA, and lighting rules into a single Alpha-Prompt.</p>
+                <p>This Alpha-Prompt is sent simultaneously to multiple models (Gemini 2.5 Flash, Imagen 4, Nano Banana Pro, Ideogram V3, Grok Imagine). Each model returns a variation with the same brand identity preserved, and the best output(s) are uploaded to Google Drive automatically.</p>
+              </section>
+
+            </article>
+          </div>
+        </section>
+
+        <!-- Under the Hood (Architecture) -->
+        <section class="cs-under-the-hood">
+          <div class="cs-under-the-hood-container">
+            <h2>Under the hood.</h2>
+            <p>The automated n8n workflow implementing the Alpha-Prompt engineering and multi-model generation pipeline.</p>
+            <img src="/assets/casestudy/imagegeneration/image_n8n.jpg" alt="n8n Workflow Implementation" />
+          </div>
+        </section>
+
+        <!-- Results Banner -->
+        <section class="cs-results-section">
+          <div class="cs-results-container">
+            <div class="cs-results-left">
+              <h2>Results.</h2>
+              <ul class="cs-results-list">
+                <li><i class="fa-solid fa-check"></i> <div><strong>100%</strong> — Consistent brand aesthetic in every output</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>1000+</strong> — Images generated per day at scale</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Multi-Model</strong> — Resilient parallel generation pipeline</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Zero</strong> — Guesswork required by the design team</div></li>
+              </ul>
+            </div>
+            <div class="cs-results-right">
+              <div class="cs-results-card">
+                <div class="circle-decor"></div>
+                <h4>Bottom Line</h4>
+                <div class="huge-metric">1000+</div>
+                <p>Brand-perfect images per day</p>
+                <a href="/contact.html">Want one of these? Book a call &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="cs-testimonial-section" style="padding: 100px 0; background-color: var(--bg-primary);">
+          <div class="cs-under-the-hood-container" style="text-align: center;">
+            <div class="circle-decor" style="margin: 0 auto 32px auto;"></div>
+            <blockquote style="font-family: var(--font-heading); font-size: 2.2rem; color: #fff; line-height: 1.4; margin-bottom: 32px; font-weight: 300;">
+              "This system transforms brand image generation from a bottleneck into an infinite-capacity automation engine, preserving creative vision while enabling unlimited production at zero additional cost."
             </blockquote>
-
-            <p style="margin-bottom: 20px; font-weight: 600;">This system eliminates guesswork, reduces design load to zero, and guarantees the brand's aesthetic DNA is preserved across every asset—no matter who uses the tool.</p>
-
+            <footer style="color: var(--accent); font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">— Creative Direction Team</footer>
           </div>
-        </div>
+        </section>
+
+        <!-- More Work -->
+        <section class="cs-more-work">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-more-work-header">
+              <h2>More work.</h2>
+              <a href="/case-study.html">View all case studies &rarr;</a>
+            </div>
+            <div class="cs-more-work-grid">
+              
+              <a href="/case-studies/sacred-text-publishing.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Religious & Education</span>
+                    <span>Content Generation</span>
+                  </div>
+                  <div class="cs-more-card-metric">100x</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">AI-Powered Religious Content Video Generator</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/medical-consultation.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Healthcare</span>
+                    <span>Automated Intake</span>
+                  </div>
+                  <div class="cs-more-card-metric">24/7</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">AI-Powered WhatsApp Medical Consultation</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/reddit-youtube.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Media</span>
+                    <span>Video Automation</span>
+                  </div>
+                  <div class="cs-more-card-metric">Zero</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">Reddit-to-YouTube Automation</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Final CTA (Surprise Section) -->
+        <section class="cs-ai-native-cta">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-ai-native-box">
+              <div class="circle-decor-large"></div>
+              <h2>Ready to become<br>AI-Native?</h2>
+              <p>Book a 30-minute conversation. We'll map the highest-leverage workflows in your business and tell you whether AI is the right answer.</p>
+              <a href="/contact.html" class="btn-arrow">
+                <span class="btn-label">Get in touch</span>
+                <span class="btn-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <!-- ========== FOOTER ========== -->

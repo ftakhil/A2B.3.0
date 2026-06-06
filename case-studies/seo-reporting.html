@@ -73,92 +73,210 @@
       </nav>
 
       <!-- ========== CASE STUDY DETAIL CONTENT ========== -->
-      <main class="case-study-detail-page" style="padding: 160px 0 100px; min-height: 100vh;">
-        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 24px;">
-          
-          <a href="/case-study.html" style="color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; display: inline-block;">
-            <i class="fa-solid fa-arrow-left" style="margin-right: 8px;"></i> Back to Case Studies
-          </a>
-
-          <h1 style="font-family: var(--font-heading); font-size: 3.5rem; margin-bottom: 24px;">Automated SEO Reporting System</h1>
-          
-          <div style="display: flex; gap: 40px; margin-bottom: 60px; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 24px 0; flex-wrap: wrap;">
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Industry</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">Digital Marketing & SEO</p>
-            </div>
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Client</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">Freelance SEO Consultant</p>
-            </div>
-            <div>
-              <strong style="color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Tech Stack</strong>
-              <p style="font-size: 1.1rem; margin-top: 8px;">n8n, Google APIs, OpenAI GPT, PDFLayer, QuickChart.io</p>
+      <main class="case-study-detail-page">
+        
+        <!-- Hero Section -->
+        <section class="cs-detail-hero">
+          <div class="cs-detail-hero-content">
+            <a href="/case-study.html" class="cs-hero-breadcrumbs">&larr; All case studies</a>
+            <span class="cs-section-label" style="color: rgba(255,255,255,0.7); margin-bottom: 24px;">Digital Marketing & SEO - Case Study</span>
+            <h1 class="cs-hero-title">Automated SEO Reporting System</h1>
+            <p class="cs-hero-subtitle">How we reduced a 3-day manual reporting process to under 30 seconds for a freelance SEO consultant using an intelligent n8n workflow.</p>
+            
+            <div class="cs-hero-meta-grid">
+              <div class="cs-meta-block">
+                <span>Client</span>
+                <strong>Freelance SEO Consultant</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Industry</span>
+                <strong>Digital Marketing</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Headline Result</span>
+                <strong class="highlight">3 Days &rarr; 30 Seconds</strong>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div class="cs-content" style="line-height: 1.8; font-size: 1.1rem; color: rgba(255,255,255,0.8);">
-
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">The Challenge</h2>
-            <p style="margin-bottom: 20px;">Melvin C V, a freelance digital marketing and n8n automation consultant based in Kochi, Kerala, faced a critical time-management challenge. For each of his clients, producing a single monthly SEO report consumed 2 to 3 full working days of manual effort.</p>
-            <p style="margin-bottom: 20px;">The process involved logging into Google Search Console and Google Analytics, exporting data, cross-referencing metrics across platforms with different date formats and export structures, building charts, calculating month-over-month comparisons, writing interpretive insights, formatting everything into a professional PDF, and finally reviewing and sending it to the client.</p>
-            <p style="margin-bottom: 20px;">For a consultant managing multiple clients, this meant reporting season consumed an unsustainable proportion of productive work hours — time that could have been invested in strategy, business development, or serving additional clients. The manual process also carried risks of human error in data entry, inconsistent report quality across months, and a hard scalability ceiling where more clients meant more days lost.</p>
-
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">The Solution</h2>
-            <p style="margin-bottom: 20px;">A2B designed and built a comprehensive, end-to-end automated SEO reporting system using n8n as the core workflow orchestration platform. The solution integrates Google Search Console, Google Analytics 4, an AI language model (OpenAI GPT), a PDF rendering service (PDFLayer), and Gmail delivery — all triggered automatically on a weekly schedule. The architecture was designed around three guiding principles: zero manual intervention after initial setup, consistent professional-grade output every time, and AI-powered intelligence that adds genuine analytical value beyond raw data. The result: a reporting process that previously consumed 2 to 3 working days was reduced to under 30 seconds.</p>
-
-            <img src="/assets/casestudy/seoreport/flow_seo.webp" alt="SEO Report Workflow Diagram: System Architecture & Data Flow" style="width: 100%; border-radius: 12px; margin: 40px 0;" />
-            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: -30px; margin-bottom: 40px;">System Architecture & Data Flow</p>
-
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 1: Trigger & Parallel Data Collection</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> n8n Scheduler fires every Monday at 8:00 AM automatically.</p>
+        <!-- Main Body -->
+        <section class="cs-detail-wrapper">
+          <div class="cs-detail-grid">
             
-            <p style="margin-bottom: 10px;"><strong>Dynamic Configuration:</strong> A Configuration node sets all required variables: site URL, current month's date range, and previous month's date range. Dynamic date calculation ensures the report always covers the correct comparison window without any manual intervention.</p>
-            <p style="margin-bottom: 10px;"><strong>10 Parallel API Streams:</strong> The configuration fans out to ten parallel API calls simultaneously: GSC Overview (current & previous month), GSC Date Breakdown, GSC Queries (current & previous), GSC Pages (current & previous), GSC Devices, GSC Countries, and Google Analytics 4 (sessions, engagement rate, channel breakdown).</p>
-            <p style="margin-bottom: 20px;"><strong>Data Normalisation & Merge:</strong> Each of the ten data streams passes through dedicated Split and Format nodes that extract, clean, and standardise the raw API response. All ten formatted streams are then merged into a single unified data payload via a 10-input Merge node.</p>
+            <!-- Sticky Sidebar (Receipts) -->
+            <aside class="cs-sticky-sidebar">
+              <div class="cs-receipts-box">
+                <h4 class="cs-receipts-title">Receipts</h4>
+                <div class="cs-receipt-item">
+                  <strong>Massive Time Savings</strong>
+                  <p>From 2-3 working days per report down to under 30 seconds.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Zero Manual Errors</strong>
+                  <p>Eliminated human error in cross-platform data extraction and entry.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>AI Analysis Included</strong>
+                  <p>OpenAI GPT generates actionable, context-aware insights automatically.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Scalable Business</strong>
+                  <p>Freed up 10 working days a month to take on new clients.</p>
+                </div>
+              </div>
+            </aside>
 
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 2: AI Analysis & Report Generation</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> Merged data payload passed to AI engine and HTML renderer.</p>
+            <!-- Right Article Content -->
+            <article class="cs-article-content">
+              
+              <section>
+                <span class="cs-section-label">The Challenge</span>
+                <h2>One report = 3 days lost.</h2>
+                <p>Melvin C V, a freelance digital marketing and n8n automation consultant based in Kochi, Kerala, faced a critical time-management challenge. For each of his clients, producing a single monthly SEO report consumed 2 to 3 full working days of manual effort.</p>
+                <p>The process involved logging into Google Search Console and Google Analytics, exporting data, cross-referencing metrics across platforms with different date formats and export structures, building charts, calculating month-over-month comparisons, writing interpretive insights, formatting everything into a professional PDF, and finally reviewing and sending it to the client.</p>
+                <p>For a consultant managing multiple clients, this meant reporting season consumed an unsustainable proportion of productive work hours — time that could have been invested in strategy, business development, or serving additional clients.</p>
+              </section>
+
+              <section>
+                <span class="cs-section-label">The Solution</span>
+                <h2>An end-to-end reporting engine.</h2>
+                <p>A2B designed and built a comprehensive, end-to-end automated SEO reporting system using n8n. The solution integrates Google Search Console, Google Analytics 4, an AI language model (OpenAI GPT), a PDF rendering service (PDFLayer), and Gmail delivery — all triggered automatically on a weekly schedule.</p>
+
+                <h3>Phase 1: Trigger & Parallel Data Collection</h3>
+                <p>An n8n Scheduler fires every Monday at 8:00 AM automatically. A Configuration node sets all required variables (site URL, dynamic date ranges).</p>
+                <p>The workflow fans out to ten parallel API calls simultaneously: GSC Overview, Date Breakdown, Queries, Pages, Devices, Countries, and GA4 metrics. Each data stream passes through dedicated Extract/Format nodes and is merged into a single unified JSON payload.</p>
+
+                <h3>Phase 2: AI Analysis & Report Generation</h3>
+                <p>The merged data is passed to OpenAI GPT, which acts as a data-driven SEO insights analyst. It produces 5 to 8 actionable insight bullet points referencing actual metrics and trends.</p>
+                <p>A custom JavaScript node assembles the complete HTML report with KPI cards, AI insights, Google Analytics channel tables, and interactive performance trend charts (via QuickChart.io).</p>
+
+                <h3>Phase 3: Report Output & Delivery</h3>
+                <p>The HTML is converted to a polished PDF via PDFLayer's API, then automatically sent via Gmail. Melvin receives a ready-to-share, client-quality SEO performance report in his inbox every Monday morning — without touching a single keyboard shortcut.</p>
+              </section>
+
+            </article>
+          </div>
+        </section>
+
+        <!-- Under the Hood (Architecture) -->
+        <section class="cs-under-the-hood">
+          <div class="cs-under-the-hood-container">
+            <h2>Under the hood.</h2>
+            <p>System Architecture, Data Flow, and n8n Workflow Implementation.</p>
             
-            <p style="margin-bottom: 10px;"><strong>AI-Powered SEO Insights:</strong> The merged data is passed to OpenAI GPT with a carefully engineered system prompt instructing it to act as a data-driven SEO insights analyst. The model produces 5 to 8 specific, actionable insight bullet points referencing actual metrics, identifying trends, highlighting anomalies, and recommending concrete next steps.</p>
-            <p style="margin-bottom: 10px;"><strong>Professional HTML Report Assembly:</strong> A custom JavaScript code node assembles the complete HTML report: KPI cards with month-over-month comparisons, AI insights section, Google Analytics channel tables, interactive performance trend charts (via QuickChart.io), top pages and keywords tables, device breakdowns, and geographic data.</p>
-            <p style="margin-bottom: 20px;"><strong>PDF Conversion & Delivery:</strong> The HTML is converted to a polished PDF via PDFLayer's API, then automatically sent via Gmail. Melvin receives a ready-to-share, client-quality SEO performance report in his inbox every Monday morning — without touching a single keyboard shortcut.</p>
+            <img src="/assets/casestudy/seoreport/flow_seo.webp" alt="System Architecture & Data Flow" style="margin-bottom: 40px;" />
+            <img src="/assets/casestudy/seoreport/n8n_seo.webp" alt="n8n Workflow Implementation" />
+          </div>
+        </section>
 
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin: 30px 0 15px;">Phase 3: Report Output & Content Structure</h3>
-            <p style="margin-bottom: 10px;"><strong>Trigger:</strong> Final PDF generated with all sections compiled.</p>
-            
-            <p style="margin-bottom: 10px;"><strong>KPI Summary Cards:</strong> Four headline metrics — Clicks, Impressions, CTR, and Average Position — each displayed with month-over-month percentage change and directional arrows. Color-coded green/red indicators make performance status instantly legible.</p>
-            <p style="margin-bottom: 10px;"><strong>Performance Trend Charts:</strong> Two line charts — one for daily Impressions and one for daily Clicks — covering the full reporting period, rendered via QuickChart.io and embedded directly in the PDF.</p>
-            <p style="margin-bottom: 20px;"><strong>Top Pages, Keywords & Geography:</strong> Top 10 highest-traffic pages and search queries ranked by organic clicks with full performance metrics. Traffic breakdown by device type (mobile, desktop, tablet) and top 10 countries by organic click volume.</p>
+        <!-- Results Banner -->
+        <section class="cs-results-section">
+          <div class="cs-results-container">
+            <div class="cs-results-left">
+              <h2>Results.</h2>
+              <ul class="cs-results-list">
+                <li><i class="fa-solid fa-check"></i> <div><strong>Time per Report</strong> — 2-3 Days &rarr; Under 30 seconds</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Manual Steps</strong> — 7+ steps &rarr; Zero</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Human Error Risk</strong> — Eliminated entirely</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Productivity</strong> — 10 working days reclaimed monthly</div></li>
+              </ul>
+            </div>
+            <div class="cs-results-right">
+              <div class="cs-results-card">
+                <div class="circle-decor"></div>
+                <h4>Bottom Line</h4>
+                <div class="huge-metric">30s</div>
+                <p>Time to generate a full report</p>
+                <a href="/contact.html">Want one of these? Book a call &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <img src="/assets/casestudy/seoreport/n8n_seo.webp" alt="n8n Workflow Implementation" style="width: 100%; border-radius: 12px; margin: 40px 0;" />
-            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: -30px; margin-bottom: 40px;">n8n Workflow Implementation</p>
-
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin: 40px 0 20px;">Return on Investment</h2>
-            <p style="margin-bottom: 20px;">The results were immediate, measurable, and transformative. The workflow runs in production delivering professional SEO reports on schedule without a single manual step required.</p>
-            
-            <p style="margin-bottom: 10px;"><strong>Quantified Results:</strong></p>
-            <ul style="margin-bottom: 20px; list-style-type: disc; margin-left: 20px;">
-              <li><strong>Time per Report:</strong> 2–3 working days → Under 30 seconds</li>
-              <li><strong>Manual Steps Required:</strong> 7+ distinct steps → Zero</li>
-              <li><strong>Human Error Risk:</strong> High (manual data entry) → Eliminated</li>
-              <li><strong>Report Consistency:</strong> Variable quality → 100% consistent</li>
-              <li><strong>Reporting Frequency:</strong> Monthly (resource-limited) → Weekly (automated)</li>
-              <li><strong>AI Analysis:</strong> None → 5–8 actionable insights per report</li>
-              <li><strong>Scalability:</strong> Linear time increase per client → Negligible marginal cost</li>
-            </ul>
-
-            <p style="margin-bottom: 20px;"><strong>ROI Analysis:</strong> Manual reporting consumed approximately 10 working days per month (2.5 days × 4 weekly reports) — that's 50% of a full working month. After automation, the same output requires 2 minutes of total machine time per month. 10 working days of productive capacity are reclaimed every single month, enabling new client acquisition, service expansion, and business growth.</p>
-
-            <blockquote style="border-left: 4px solid var(--accent); padding-left: 20px; margin: 40px 0; font-style: italic; color: #fff;">
-              <p style="margin-bottom: 10px;">"Hi, I'm Melvin, a freelance digital marketing and n8n consultant based in Kochi, Kerala. I needed an AI automation workflow that could pull data from Google Search Console and Google Analytics to generate weekly SEO reports for my clients. I came across Rahul, CEO of A2B AI Technologies in Trivandrum, through Reddit. I quickly connected with him and explained my requirements. Rahul understood the project immediately, started work right away, and kept me updated with daily progress. I'm really impressed with his dedication, responsiveness, and attention to detail. Earlier, it used to take me 2 to 3 days to prepare a monthly SEO report. Now, it takes just minutes. That's a huge time saver. If you're looking to automate your workflows, I highly recommend Rahul. You won't be disappointed."</p>
-              <footer style="font-size: 0.9rem; color: var(--text-secondary);">— Melvin C V, Freelance SEO & n8n Automation Consultant, Kochi, Kerala</footer>
+        <!-- Testimonial Section -->
+        <section class="cs-testimonial-section" style="padding: 100px 0; background-color: var(--bg-primary);">
+          <div class="cs-under-the-hood-container" style="text-align: center;">
+            <div class="circle-decor" style="margin: 0 auto 32px auto;"></div>
+            <blockquote style="font-family: var(--font-heading); font-size: 2.2rem; color: #fff; line-height: 1.4; margin-bottom: 32px; font-weight: 300;">
+              "Earlier, it used to take me 2 to 3 days to prepare a monthly SEO report. Now, it takes just minutes. That's a huge time saver."
             </blockquote>
-
-            <p style="margin-bottom: 20px; font-weight: 600;">This case study demonstrates what intelligent automation can achieve when applied to a well-defined, high-friction business problem. The automation didn't just save time — it changed the ceiling of what is achievable for a freelance consultant.</p>
-
+            <footer style="color: var(--accent); font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">— Melvin C V, Freelance SEO Consultant</footer>
           </div>
-        </div>
+        </section>
+
+        <!-- More Work -->
+        <section class="cs-more-work">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-more-work-header">
+              <h2>More work.</h2>
+              <a href="/case-study.html">View all case studies &rarr;</a>
+            </div>
+            <div class="cs-more-work-grid">
+              
+              <a href="/case-studies/sacred-text-publishing.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Religious & Education</span>
+                    <span>Content Generation</span>
+                  </div>
+                  <div class="cs-more-card-metric">100x</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">AI-Powered Religious Content Video Generator</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/visual-brand-intelligence.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Visual Brand</span>
+                    <span>Compliance Suite</span>
+                  </div>
+                  <div class="cs-more-card-metric">100%</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">Visual Brand Intelligence Enterprise OS</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/reddit-youtube.html" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Media & Content</span>
+                    <span>Automation</span>
+                  </div>
+                  <div class="cs-more-card-metric">Zero</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">Reddit-to-YouTube Automation Engine</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Final CTA (Surprise Section) -->
+        <section class="cs-ai-native-cta">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-ai-native-box">
+              <div class="circle-decor-large"></div>
+              <h2>Ready to become<br>AI-Native?</h2>
+              <p>Book a 30-minute conversation. We'll map the highest-leverage workflows in your business and tell you whether AI is the right answer.</p>
+              <a href="/contact.html" class="btn-arrow">
+                <span class="btn-label">Get in touch</span>
+                <span class="btn-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <!-- ========== FOOTER ========== -->
