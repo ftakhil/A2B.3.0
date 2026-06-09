@@ -164,6 +164,26 @@
           </div>
         </section>
 
+        <!-- ── 2b. PDF DOWNLOAD BANNER (shown only when URL is set) ─── -->
+        <section id="post-pdf-banner" style="display: none; background: #f0eee9; padding: 40px 0; border-top: 1px solid rgba(0,0,0,0.06);">
+          <div style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-padding); display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+            <div>
+              <p style="font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #888; margin-bottom: 8px;">Attached Document</p>
+              <p style="font-size: 1.1rem; font-weight: 500; color: #111; margin: 0;">This post includes a downloadable PDF.</p>
+            </div>
+            <a id="post-pdf-banner-btn" href="#" target="_blank" rel="noopener" class="btn-arrow">
+              <span class="btn-label">View / Download PDF</span>
+              <span class="btn-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </section>
+
         <!-- ── 3. FINAL CTA ──────────────────────────────── -->
         <section class="cs-ai-native-cta" id="post-cta" style="display: none;">
           <div class="cs-under-the-hood-container">
@@ -330,6 +350,8 @@
             el('post-meta-pdf-link').href = docUrl;
             el('sidebar-pdf-section').style.display = '';
             el('sidebar-pdf-btn').href = docUrl;
+            el('post-pdf-banner').style.display = '';
+            el('post-pdf-banner-btn').href = docUrl;
           }
 
           show('post-hero');

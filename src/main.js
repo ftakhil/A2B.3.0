@@ -63,16 +63,18 @@ function initMobileMenu() {
 }
 
 /**
- * Navbar Dropdown dynamic content
+ * Resources dropdown dynamic content — scoped to #resourcesDropdown.
  */
 function initDropdowns() {
-  const links = document.querySelectorAll('.mega-link');
-  const titleEl = document.querySelector('.mega-title');
-  const descEl = document.querySelector('.mega-desc');
+  const wrapper = document.getElementById('resourcesDropdown');
+  if (!wrapper) return;
+
+  const links = wrapper.querySelectorAll('.mega-link');
+  const titleEl = wrapper.querySelector('.mega-title');
+  const descEl = wrapper.querySelector('.mega-desc');
 
   if (!links.length || !titleEl || !descEl) return;
 
-  // Store the default content
   const defaultTitle = titleEl.textContent;
   const defaultDesc = descEl.textContent;
 
@@ -83,17 +85,54 @@ function initDropdowns() {
       if (title) titleEl.textContent = title;
       if (desc) descEl.textContent = desc;
     });
-
-    // Optionally revert to default when leaving the links container
-    // or just leave the last hovered state active.
-    // Leaving it active is usually smoother for mega menus.
   });
-  
-  const megaMenuLeft = document.querySelector('.mega-menu-left');
+
+  const megaMenuLeft = wrapper.querySelector('.mega-menu-left');
   if (megaMenuLeft) {
     megaMenuLeft.addEventListener('mouseleave', () => {
       titleEl.textContent = defaultTitle;
       descEl.textContent = defaultDesc;
+    });
+  }
+}
+
+/**
+ * Services dropdown — category list with dynamic subcategory panel.
+ */
+function initServiceDropdown() {
+  const wrapper = document.getElementById('servicesDropdown');
+  if (!wrapper) return;
+
+  const svcLinks = wrapper.querySelectorAll('.svc-link');
+  const titleEl  = wrapper.querySelector('.svc-mega-title');
+  const descEl   = wrapper.querySelector('.svc-mega-desc');
+  const subList  = wrapper.querySelector('.svc-sub-list');
+
+  if (!svcLinks.length || !titleEl) return;
+
+  const defaultTitle = titleEl.textContent;
+  const defaultDesc  = descEl ? descEl.textContent : '';
+
+  svcLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      if (link.dataset.title) titleEl.textContent = link.dataset.title;
+      if (descEl && link.dataset.desc) descEl.textContent = link.dataset.desc;
+      if (subList && link.dataset.subs) {
+        const items = link.dataset.subs.split(',');
+        subList.innerHTML = items.map(s =>
+          `<li class="svc-sub-item"><span class="svc-sub-dot"></span>${s.trim()}</li>`
+        ).join('');
+        subList.style.display = '';
+      }
+    });
+  });
+
+  const svcLeft = wrapper.querySelector('.svc-mega-left');
+  if (svcLeft) {
+    svcLeft.addEventListener('mouseleave', () => {
+      titleEl.textContent = defaultTitle;
+      if (descEl) descEl.textContent = defaultDesc;
+      if (subList) subList.style.display = 'none';
     });
   }
 }
@@ -247,6 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initWordAnimation();
   initMobileMenu();
   initDropdowns();
+  initServiceDropdown();
   initNavScroll();
   initEntranceAnimations();
   initDarkTabs();
