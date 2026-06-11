@@ -1,0 +1,327 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GitArt - Beautiful visualizations for your GitHub repositories." />
+    <title>GitArt | A2B AI Technologies</title>
+
+    <!-- FontAwesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+
+      <!-- ========== NAVBAR ========== -->
+      <nav class="navbar light-nav" id="navbar">
+        <div class="nav-container">
+          <!-- Logo -->
+          <a href="/" class="nav-logo" aria-label="A2B Home">
+            <img src="/assets/logos/a2blogowhite.png" alt="A2B Logo" class="nav-logo-img" width="42" height="42" />
+            <span class="nav-logo-text">A2B</span>
+          </a>
+
+          <!-- Navigation Links -->
+          <div class="nav-links" id="navLinks">
+            <a href="/" class="nav-link">Home <span class="nav-slash"></span></a>
+            <a href="/product" class="nav-link active">Product <span class="nav-slash"></span></a>
+            <a href="/service" class="nav-link">Service <span class="nav-slash"></span></a>
+            <a href="/case-studies" class="nav-link">Case Study <span class="nav-slash"></span></a>
+            <div class="nav-dropdown-wrapper" id="resourcesDropdown">
+              <button class="nav-link nav-dropdown-btn">Resources <span class="nav-slash"></span></button>
+              <div class="nav-dropdown-menu mega-menu">
+                <div class="mega-menu-left">
+                  <div class="mega-menu-label">
+                    <svg width="12" height="12" viewBox="0 0 44 44" fill="var(--accent)" xmlns="http://www.w3.org/2000/svg">
+                      <polygon points="22,1 43,11 43,33 22,43 1,33 1,11" />
+                    </svg>
+                    RESOURCES
+                  </div>
+                  <div class="mega-links">
+                    <a href="/blog" class="mega-link" data-title="Field notes & Breakdowns" data-desc="Read our latest articles on agentic workflows, enterprise AI strategy, and building autonomous systems.">Blog</a>
+                    <a href="/youtube" class="mega-link" data-title="Walkthroughs & Live Builds" data-desc="Watch our engineers build live, break down complex AI agents, and give product deep-dives on our channel.">YouTube</a>
+                  </div>
+                </div>
+                <div class="mega-menu-right">
+                  <div class="mega-content">
+                    <h3 class="mega-title">“We partner with brands to move the world through tech, design and strategy.”</h3>
+                    <p class="mega-desc">Dive into our field notes, video walkthroughs, and frameworks on AI-native operations to build a smarter future.</p>
+                  </div>
+                  <a href="/contact" class="btn-arrow mega-contact-btn">
+                    <span class="btn-label">Contact Us</span>
+                    <span class="btn-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="/about" class="nav-link">About <span class="nav-slash"></span></a>
+          </div>
+
+          <!-- Contact CTA Button -->
+          <a href="/contact" class="btn-arrow nav-cta" id="navCta">
+            <span class="btn-label">Contact</span>
+            <span class="btn-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button class="nav-hamburger" id="navHamburger" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- ========== PRODUCT DETAIL CONTENT ========== -->
+      <main class="ns-page">
+        
+        <!-- Hero Section -->
+        <section class="ns-hero ns-section-light">
+          <div class="ns-container">
+            <div class="ns-hero-top-vertical">
+              <div class="ns-hero-brand-row ns-animate">
+                <div class="ns-hero-logo-box">
+                  <img src="/assets/product/gitart/gitartlogo.webp" alt="GitArt Logo" class="ns-hero-big-logo">
+                </div>
+                <div class="ns-hero-brand-text">
+                  <h2 class="ns-product-name">GitArt</h2>
+                  <h1 class="ns-hero-title">
+                    <span class="ns-title-text">Paint your GitHub</span>
+                    <span class="ns-title-text">contribution</span>
+                    <span class="ns-cursive-accent">Graph</span>
+                  </h1>
+                </div>
+              </div>
+              
+              <p class="ns-hero-desc-full ns-animate ns-delay-1">Your GitHub contribution graph is a 52×7 grid of green squares. GitArt gives you a visual editor to click and design any pattern on that grid, then handles all the technical work of generating the Git commits needed to produce that exact design on your real GitHub profile.</p>
+              
+              <div class="ns-hero-actions-left ns-animate ns-delay-2">
+                <a href="#" class="btn-arrow btn-dark">
+                  <span class="btn-label">Start Painting</span>
+                  <span class="btn-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </a>
+                <a href="/contact" class="btn-arrow btn-dark">
+                  <span class="btn-label">Have a question?</span>
+                  <span class="btn-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <div class="ns-image-grid ns-animate ns-delay-2">
+              <img src="/assets/product/gitart/gitartex1.webp" alt="Visual grid editor interface" />
+              <img src="/assets/product/gitart/gitartex2.webp" alt="Pattern design in progress" />
+              <img src="/assets/product/gitart/gitartex3.webp" alt="Generated GitHub Actions script" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="ns-section-dark">
+          <div class="ns-container">
+            <div class="ns-dark-header ns-animate">
+              <span class="ns-dark-badge">GITART PRODUCT SERVICES</span>
+              <h2 class="ns-dark-title">GitArt Solutions Built for <span class="ns-dark-cursive">Scale</span></h2>
+            </div>
+            <div class="ns-features-list">
+              <!-- Feature 1 -->
+              <div class="ns-feature-item">
+                <div class="ns-feature-header">
+                  <i class="fa-solid fa-wand-magic-sparkles ns-feature-icon"></i>
+                  <h3 class="ns-feature-title">Visual Grid Editor</h3>
+                </div>
+                <p class="ns-feature-desc">Click-to-draw interface on a real GitHub-style contribution grid. No coding required to design your pattern.</p>
+              </div>
+              <!-- Feature 2 -->
+              <div class="ns-feature-item">
+                <div class="ns-feature-header">
+                  <i class="fa-regular fa-calendar-days ns-feature-icon"></i>
+                  <h3 class="ns-feature-title">Year Selector</h3>
+                </div>
+                <p class="ns-feature-desc">Choose which year's contribution graph to paint. Pick a year before you joined GitHub for the cleanest result.</p>
+              </div>
+              <!-- Feature 3 -->
+              <div class="ns-feature-item">
+                <div class="ns-feature-header">
+                  <i class="fa-solid fa-terminal ns-feature-icon"></i>
+                  <h3 class="ns-feature-title">Instant Script Output</h3>
+                </div>
+                <p class="ns-feature-desc">Once your design is ready, GitArt produces complete, copy-paste-ready terminal commands, no manual scripting needed.</p>
+              </div>
+              <!-- Feature 4 -->
+              <div class="ns-feature-item">
+                <div class="ns-feature-header">
+                  <i class="fa-solid fa-shapes ns-feature-icon"></i>
+                  <h3 class="ns-feature-title">Custom Patterns</h3>
+                </div>
+                <p class="ns-feature-desc">Names, words, symbols, logos, pixel art. If it fits in the GitHub contribution grid, GitArt can generate it.</p>
+              </div>
+              <!-- Feature 5 -->
+              <div class="ns-feature-item">
+                <div class="ns-feature-header">
+                  <i class="fa-solid fa-rocket ns-feature-icon"></i>
+                  <h3 class="ns-feature-title">Two Generation Modes</h3>
+                </div>
+                <p class="ns-feature-desc">Auto-generate with GitHub Actions (one-click, no local setup) or generate raw Git commands for full manual control.</p>
+              </div>
+              <!-- Feature 6 -->
+              <div class="ns-feature-item">
+                <div class="ns-feature-header">
+                  <i class="fa-solid fa-tag ns-feature-icon"></i>
+                  <h3 class="ns-feature-title">Free to Use</h3>
+                </div>
+                <p class="ns-feature-desc">No account required. Open the tool, design your pattern, generate, done. Completely free.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="ns-section-light-cut">
+          <div class="ns-container">
+            <div class="ns-light-title-box ns-animate">
+              <span class="ns-light-badge">OUR APPROACH</span>
+              <h2 class="ns-light-title">Why Choose GitArt as Your Customization <span class="ns-light-cursive">Partner</span></h2>
+            </div>
+            <div class="ns-steps-grid ns-animate ns-delay-1">
+              <div class="ns-step-item">
+                <h3 class="ns-step-title">01 Design Your Pattern</h3>
+                <p class="ns-step-desc">Open the visual grid editor. Click squares to draw your name, a message, a logo, or any shape. Select the year you want it to appear on.</p>
+              </div>
+              <div class="ns-step-item">
+                <h3 class="ns-step-title">02 Generate the Commits</h3>
+                <p class="ns-step-desc">Choose auto-generate via GitHub Actions, or get a ready-to-run shell script of backdated Git commit commands for your terminal.</p>
+              </div>
+              <div class="ns-step-item">
+                <h3 class="ns-step-title">03 Push and It's Live</h3>
+                <p class="ns-step-desc">Follow the short setup steps, run the script, push to GitHub, and your contribution graph shows your design instantly.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Final CTA (Surprise Section) -->
+        <section class="cs-ai-native-cta" style="position: relative; z-index: 8; margin-top: -60px; clip-path: polygon(0 60px, 50% 60px, 56% 0, 100% 0, 100% 100%, 0 100%);">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-ai-native-box ns-animate">
+              <div class="circle-decor-large"></div>
+              <h2>Ready to try<br>GitArt?</h2>
+              <p>Turn your GitHub contribution graph into pixel art. Draw names, messages, symbols, or any pattern, then generate the exact Git commands to make it real.</p>
+              <div style="display: flex; gap: 16px; margin-top: 24px; justify-content: center;">
+                <a href="#" class="btn-arrow">
+                  <span class="btn-label">Start Painting</span>
+                  <span class="btn-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </a>
+                <a href="/contact" class="btn-arrow">
+                  <span class="btn-label">Contact Us</span>
+                  <span class="btn-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ========== FOOTER ========== -->
+      <footer class="site-footer" id="footer">
+        <div class="footer-container">
+          <div class="footer-inner">
+
+            <div class="footer-top-right">
+              <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/a2bai" target="_blank" rel="noopener" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/a2bai.tech" target="_blank" rel="noopener" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCOr8E2dKBEP6wZI3j19tlaw" target="_blank" rel="noopener" class="social-link"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-content">
+              <!-- Left CTA Side -->
+              <div class="footer-cta">
+                <div class="footer-logo-hex">
+                  <img src="/assets/logos/a2blogowhite.png" alt="A2B Logo" />
+                </div>
+                <h2 class="footer-title">A2B AI Technologies™</h2>
+                <p class="footer-desc">An elite AI agency helping you build a smarter future through Agentic Coding, AI Workflows, and Enterprise Automation.</p>
+                
+                <a href="#" class="btn-arrow footer-btn">
+                  <span class="btn-label">Free consultancy</span>
+                  <div class="btn-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </a>
+
+                <hr class="footer-divider" />
+                
+                <div class="footer-contact-info">
+                  <a href="mailto:a2b.business.official@gmail.com" class="footer-email">a2b.business.official@gmail.com</a>
+                  <p class="footer-location">Trivandrum · Kerala · India</p>
+                </div>
+              </div>
+
+              <!-- Right Links Side -->
+              <div class="footer-links-wrapper">
+                <div class="footer-link-col">
+                  <h4 class="footer-col-title">Services</h4>
+                  <a href="#">AI Strategy</a>
+                  <a href="#">Agentic Coding</a>
+                  <a href="#">Workflow Auto</a>
+                  <a href="#">Custom Models</a>
+                  <a href="#">Consulting</a>
+                  <a href="#">Enterprise AI</a>
+                </div>
+                <div class="footer-link-col">
+                  <h4 class="footer-col-title">Useful Links</h4>
+                  <a href="#">Contact Us</a>
+                  <a href="#">Speaking</a>
+                  <a href="#">Support</a>
+                  <a href="#">Apparel</a>
+                  <a href="/blog">Blog</a>
+                  <a href="#">Sitemap</a>
+                </div>
+                <div class="footer-link-col">
+                  <h4 class="footer-col-title">Company</h4>
+                  <a href="/case-studies">Case Studies</a>
+                  <a href="/product">Products</a>
+                  <a href="#">Culture</a>
+                  <a href="#">Team</a>
+                  <a href="/about">About</a>
+                  <a href="#">Terms</a>
+                  <a href="#">Privacy</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="footer-bottom">
+              <div class="footer-copyright">
+                ©2026 A2B AI Technologies
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

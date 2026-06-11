@@ -1,0 +1,237 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A2B Custom AI: Fine-tuned LLMs, RAG pipelines, knowledge bases & custom model evaluation — purpose-built AI that knows your domain, your data, and your terminology." />
+    <meta name="robots" content="index, follow" />
+    <title>Custom AI Models & RAG Systems | Fine-Tuning & Knowledge Bases | A2B AI Technologies</title>
+    <link rel="canonical" href="https://a2b.services/services/custom-ai" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="A2B AI Technologies" />
+    <meta property="og:title" content="Custom AI Models & RAG Systems | A2B AI Technologies" />
+    <meta property="og:description" content="Fine-tuned LLMs, RAG pipelines, and purpose-built AI that knows your domain and data." />
+    <meta property="og:url" content="https://a2b.services/services/custom-ai" />
+    <meta property="og:image" content="https://a2b.services/assets/logos/a2blogowhite.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Custom AI Models & RAG Systems | A2B AI Technologies" />
+    <meta name="twitter:description" content="Fine-tuned LLMs, RAG pipelines, and custom AI that knows your domain and terminology." />
+    <meta name="twitter:image" content="https://a2b.services/assets/logos/a2blogowhite.png" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://a2b.services/services/custom-ai#service",
+          "name": "Custom AI Models & RAG Systems",
+          "provider": {"@id": "https://a2b.services/#organization"},
+          "description": "Fine-tuned models, RAG pipelines, and purpose-built AI that knows your domain, your data, and your terminology — not just what was in the training set.",
+          "url": "https://a2b.services/services/custom-ai",
+          "areaServed": "Worldwide",
+          "serviceType": "Custom AI Development",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Custom AI Services",
+            "itemListElement": [
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "LLM Fine-Tuning & Training"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "RAG Systems"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Model Evaluation"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Knowledge Bases"}}
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://a2b.services/"},
+            {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://a2b.services/service"},
+            {"@type": "ListItem", "position": 3, "name": "Custom AI", "item": "https://a2b.services/services/custom-ai"}
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is a RAG system?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "RAG (Retrieval-Augmented Generation) is an AI architecture that connects a language model to your private data. Instead of relying only on training data, the model retrieves relevant documents from your knowledge base at query time and generates accurate, domain-specific answers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "When should I fine-tune an AI model vs use RAG?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use RAG when your data changes frequently and you need accurate, up-to-date retrieval from documents. Use fine-tuning when you need the model to adopt a specific style, format, or domain terminology that cannot be achieved through prompting alone. A2B helps you choose and build the right approach."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can A2B build a custom AI model on my company's data?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. A2B builds custom AI models fine-tuned on your proprietary data, internal documents, and domain-specific terminology. We handle data preparation, training, evaluation, and deployment."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://a2b.services/#organization",
+          "name": "A2B AI Technologies",
+          "url": "https://a2b.services"
+        }
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body><div id="app">
+
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo" aria-label="A2B Home"><img src="/assets/logos/a2blogowhite.png" alt="A2B Logo" class="nav-logo-img" width="42" height="42" /><span class="nav-logo-text">A2B</span></a>
+        <div class="nav-links" id="navLinks">
+          <a href="/" class="nav-link">Home <span class="nav-slash"></span></a>
+          <a href="/product" class="nav-link">Product <span class="nav-slash"></span></a>
+          <div class="nav-dropdown-wrapper" id="servicesDropdown">
+            <button class="nav-link nav-dropdown-btn active">Service <span class="nav-slash"></span></button>
+            <div class="nav-dropdown-menu mega-menu svc-mega-menu">
+              <div class="mega-menu-left svc-mega-left">
+                <div class="mega-menu-label"><svg width="12" height="12" viewBox="0 0 44 44" fill="var(--accent)" xmlns="http://www.w3.org/2000/svg"><polygon points="22,1 43,11 43,33 22,43 1,33 1,11"/></svg> SERVICES</div>
+                <div class="mega-links svc-links">
+                  <a href="/services/ai-automation" class="mega-link svc-link" data-title="AI Automation" data-desc="Intelligent process automation that eliminates manual work, connects your systems, and ships measurable ROI in weeks." data-subs="Document Intelligence,Workflow Automation,Data Pipeline Automation,Cross-System Integration">AI Automation</a>
+                  <a href="/services/ai-agents" class="mega-link svc-link" data-title="AI Agents" data-desc="Autonomous agentic systems that think, plan, and execute multi-step tasks without human intervention." data-subs="Task Agents,Multi-Agent Systems,Agentic Coding,Task Orchestration">AI Agents</a>
+                  <a href="/services/custom-ai" class="mega-link svc-link" data-title="Custom AI" data-desc="Fine-tuned models, RAG pipelines, and purpose-built AI that knows your domain, your data, and your terminology." data-subs="Fine-tuning & Training,RAG Systems,Model Evaluation,Knowledge Bases">Custom AI</a>
+                  <a href="/services/ai-strategy" class="mega-link svc-link" data-title="AI Strategy" data-desc="Discovery, roadmapping, and ROI modeling — turning AI opportunity into a plan your team can actually execute." data-subs="Discovery Blueprint,ROI Modeling,AI Readiness Assessment,Team Training">AI Strategy</a>
+                  <a href="/services/enterprise-ai" class="mega-link svc-link" data-title="Enterprise AI" data-desc="Production-grade AI infrastructure — compliance-ready, audit-traceable, and built to run at enterprise scale." data-subs="Enterprise Integration,Compliance & Governance,Scale & Infrastructure,Ongoing Support">Enterprise AI</a>
+                </div>
+              </div>
+              <div class="mega-menu-right">
+                <div class="mega-content"><h3 class="mega-title svc-mega-title">Our Services</h3><p class="mega-desc svc-mega-desc">Hover a service to explore what we build.</p><ul class="svc-sub-list" style="display:none;"></ul></div>
+                <a href="/service" class="btn-arrow mega-contact-btn"><span class="btn-label">All Services</span><span class="btn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+              </div>
+            </div>
+          </div>
+          <a href="/case-studies" class="nav-link">Case Study <span class="nav-slash"></span></a>
+          <div class="nav-dropdown-wrapper" id="resourcesDropdown">
+            <button class="nav-link nav-dropdown-btn">Resources <span class="nav-slash"></span></button>
+            <div class="nav-dropdown-menu mega-menu">
+              <div class="mega-menu-left"><div class="mega-menu-label"><svg width="12" height="12" viewBox="0 0 44 44" fill="var(--accent)" xmlns="http://www.w3.org/2000/svg"><polygon points="22,1 43,11 43,33 22,43 1,33 1,11"/></svg> RESOURCES</div><div class="mega-links"><a href="/blog" class="mega-link" data-title="Field notes & Breakdowns" data-desc="Read our latest articles on agentic workflows, enterprise AI strategy, and building autonomous systems.">Blog</a><a href="/youtube" class="mega-link" data-title="Walkthroughs & Live Builds" data-desc="Watch our engineers build live, break down complex AI agents, and give product deep-dives on our channel.">YouTube</a></div></div>
+              <div class="mega-menu-right"><div class="mega-content"><h3 class="mega-title">"We partner with brands to move the world through tech, design and strategy."</h3><p class="mega-desc">Dive into our field notes, video walkthroughs, and frameworks on AI-native operations to build a smarter future.</p></div><a href="/contact" class="btn-arrow mega-contact-btn"><span class="btn-label">Contact Us</span><span class="btn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a></div>
+            </div>
+          </div>
+          <a href="/about" class="nav-link">About <span class="nav-slash"></span></a>
+        </div>
+        <a href="/contact" class="btn-arrow nav-cta"><span class="btn-label">Contact</span><span class="btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+
+    <section class="svc-hero">
+      <div class="svc-hero-content">
+        <a href="/service" class="svc-hero-breadcrumb">&larr; All Services</a>
+        <div class="svc-hero-tag">Service 03</div>
+        <h1 class="svc-hero-title">AI that knows<br/>your domain.</h1>
+        <p class="svc-hero-subtitle">Fine-tuned models, retrieval-augmented pipelines, and purpose-built AI that understands your terminology, your edge cases, and your data — not just the internet.</p>
+        <div class="svc-hero-metrics">
+          <div class="svc-metric"><span class="svc-metric-value">95%+</span><span class="svc-metric-label">Accuracy on domain tasks</span></div>
+          <div class="svc-metric"><span class="svc-metric-value">60%</span><span class="svc-metric-label">Less hallucination vs. base model</span></div>
+          <div class="svc-metric"><span class="svc-metric-value">Your data</span><span class="svc-metric-label">Stays in your infrastructure</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-features-section">
+      <div class="svc-section-container">
+        <div class="svc-section-header">
+          <span class="svc-section-label">What we build</span>
+          <h2 class="svc-section-title">Models that fit your<br/>business, not the other way.</h2>
+          <p class="svc-section-desc">Off-the-shelf LLMs are general. Your business isn't. We build the layer that makes AI specific to you.</p>
+        </div>
+        <div class="svc-feature-grid">
+          <div class="svc-feature-card">
+            <div class="svc-feature-hex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <h3 class="svc-feature-title">Fine-tuning &amp; Training</h3>
+            <p class="svc-feature-text">Train base models on your proprietary data — internal docs, historical decisions, product knowledge — so the model behaves the way your experts do.</p>
+          </div>
+          <div class="svc-feature-card">
+            <div class="svc-feature-hex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+            <h3 class="svc-feature-title">RAG Systems</h3>
+            <p class="svc-feature-text">Retrieval-Augmented Generation pipelines that ground every LLM response in your source-of-truth documents — reducing hallucination and enabling citation.</p>
+          </div>
+          <div class="svc-feature-card">
+            <div class="svc-feature-hex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <h3 class="svc-feature-title">Model Evaluation</h3>
+            <p class="svc-feature-text">Systematic eval frameworks that measure what actually matters: accuracy on your task, regression from model updates, and edge-case failure rates.</p>
+          </div>
+          <div class="svc-feature-card">
+            <div class="svc-feature-hex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+            <h3 class="svc-feature-title">Knowledge Bases</h3>
+            <p class="svc-feature-text">Structured, searchable AI knowledge systems built from your unstructured content — manuals, case notes, emails — queryable by AI and humans alike.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-stats-section">
+      <div class="svc-section-container">
+        <div class="svc-stats-eyebrow">Production results</div>
+        <div class="svc-stats-grid">
+          <div class="svc-stat-block"><div class="svc-stat-num">200+</div><div class="svc-stat-title">LLCs onboarded — financial services</div><p class="svc-stat-desc">Custom KYC model that extracted and validated investor data from complex fund documents at scale.</p></div>
+          <div class="svc-stat-block"><div class="svc-stat-num">85%</div><div class="svc-stat-title">Faster claims processing — insurance</div><p class="svc-stat-desc">Domain-specific model trained on carrier policy language to classify and route claims without human review.</p></div>
+          <div class="svc-stat-block"><div class="svc-stat-num">95%</div><div class="svc-stat-title">Accuracy on legal clause extraction</div><p class="svc-stat-desc">RAG pipeline that locates and categorises contract clauses across thousands of documents per hour.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-use-section">
+      <div class="svc-section-container">
+        <div class="svc-use-inner">
+          <div class="svc-use-left">
+            <h2>Where custom AI outperforms off-the-shelf.</h2>
+            <p>General models are impressive. But when the task is specific — your terminology, your formats, your risk tolerance — a purpose-built model pays for itself immediately.</p>
+            <a href="/contact" class="btn-arrow" style="margin-top:8px;"><span class="btn-label">Discuss your use case</span><span class="btn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          </div>
+          <ul class="svc-use-list">
+            <li class="svc-use-item"><span class="svc-use-num">01</span><div class="svc-use-text"><strong>Legal Document Analysis</strong><p>Contracts, briefs, and discovery documents — extracted and flagged with attorney-level precision.</p></div></li>
+            <li class="svc-use-item"><span class="svc-use-num">02</span><div class="svc-use-text"><strong>Medical Coding &amp; Clinical Notes</strong><p>ICD codes, SOAP notes, and clinical documentation — processed accurately without provider bottlenecks.</p></div></li>
+            <li class="svc-use-item"><span class="svc-use-num">03</span><div class="svc-use-text"><strong>Financial Report Generation</strong><p>Fund summaries, earnings analysis, and compliance reports — generated from structured data at volume.</p></div></li>
+            <li class="svc-use-item"><span class="svc-use-num">04</span><div class="svc-use-text"><strong>Product &amp; Technical Content</strong><p>Spec sheets, datasheets, and product descriptions — accurate, on-brand, and generated at catalogue scale.</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-ai-native-cta" style="background:#f0eee9;padding:0 0 100px;">
+      <div class="cs-under-the-hood-container"><div class="cs-ai-native-box"><div class="circle-decor-large"></div>
+        <h2>AI that speaks<br/>your language.</h2>
+        <p>Tell us what the off-the-shelf model gets wrong. We'll scope a custom solution — fine-tune, RAG, or hybrid — and show you what accuracy looks like on your actual task.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;">
+          <a href="/contact" class="btn-arrow"><span class="btn-label">Free consultancy</span><span class="btn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a href="/case-studies" class="btn-arrow"><span class="btn-label">View case studies</span><span class="btn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        </div>
+      </div></div>
+    </section>
+
+    <footer class="site-footer"><div class="footer-container"><div class="footer-inner">
+      <div class="footer-top-right"><div class="footer-socials"><a href="https://www.linkedin.com/company/a2bai" target="_blank" rel="noopener" class="social-link"><i class="fab fa-linkedin-in"></i></a><a href="https://www.instagram.com/a2bai.tech" target="_blank" rel="noopener" class="social-link"><i class="fab fa-instagram"></i></a><a href="https://www.youtube.com/channel/UCOr8E2dKBEP6wZI3j19tlaw" target="_blank" rel="noopener" class="social-link"><i class="fab fa-youtube"></i></a></div></div>
+      <div class="footer-content">
+        <div class="footer-cta"><div class="footer-logo-hex"><img src="/assets/logos/a2blogowhite.png" alt="A2B Logo" /></div><h2 class="footer-title">A2B AI Technologies™</h2><p class="footer-desc">An elite AI agency helping you build a smarter future through Agentic Coding, AI Workflows, and Enterprise Automation.</p><a href="/contact" class="btn-arrow footer-btn"><span class="btn-label">Free consultancy</span><div class="btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></a><hr class="footer-divider" /><div class="footer-contact-info"><a href="mailto:a2b.business.official@gmail.com" class="footer-email">a2b.business.official@gmail.com</a><p class="footer-location">Trivandrum · Kerala · India</p></div></div>
+        <div class="footer-links-wrapper">
+          <div class="footer-link-col"><h4 class="footer-col-title">Services</h4><a href="/services/ai-automation">AI Automation</a><a href="/services/ai-agents">AI Agents</a><a href="/services/custom-ai">Custom AI</a><a href="/services/ai-strategy">AI Strategy</a><a href="/services/enterprise-ai">Enterprise AI</a></div>
+          <div class="footer-link-col"><h4 class="footer-col-title">Useful Links</h4><a href="/contact">Contact Us</a><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="#">Sitemap</a></div>
+          <div class="footer-link-col"><h4 class="footer-col-title">Company</h4><a href="/product">Products</a><a href="/about">About</a><a href="#">Terms</a><a href="#">Privacy</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><div class="footer-copyright">©2026 A2B AI Technologies</div></div>
+    </div></div></footer>
+
+  </div><script type="module" src="/src/main.js"></script></body>
+</html>

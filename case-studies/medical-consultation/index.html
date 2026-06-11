@@ -1,0 +1,352 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A2B Case Study - AI-Powered WhatsApp Medical Consultation Automation System for Multi-Hospital Network" />
+    <title>Medical Consultation Automation | A2B AI Technologies</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+
+      <!-- ========== NAVBAR ========== -->
+      <nav class="navbar" id="navbar">
+        <div class="nav-container">
+          <a href="/" class="nav-logo" aria-label="A2B Home">
+            <img src="/assets/logos/a2blogowhite.png" alt="A2B Logo" class="nav-logo-img" width="42" height="42" />
+            <span class="nav-logo-text">A2B</span>
+          </a>
+
+          <div class="nav-links" id="navLinks">
+            <a href="/" class="nav-link">Home <span class="nav-slash"></span></a>
+            <a href="/product" class="nav-link">Product <span class="nav-slash"></span></a>
+            <a href="/service" class="nav-link">Service <span class="nav-slash"></span></a>
+            <a href="/case-studies" class="nav-link active">Case Study <span class="nav-slash"></span></a>
+            <div class="nav-dropdown-wrapper" id="resourcesDropdown">
+              <button class="nav-link nav-dropdown-btn">Resources <span class="nav-slash"></span></button>
+              <div class="nav-dropdown-menu mega-menu">
+                <div class="mega-menu-left">
+                  <div class="mega-menu-label">
+                    <svg width="12" height="12" viewBox="0 0 44 44" fill="var(--accent)" xmlns="http://www.w3.org/2000/svg">
+                      <polygon points="22,1 43,11 43,33 22,43 1,33 1,11" />
+                    </svg>
+                    RESOURCES
+                  </div>
+                  <div class="mega-links">
+                    <a href="/blog" class="mega-link" data-title="Field notes & Breakdowns" data-desc="Read our latest articles on agentic workflows, enterprise AI strategy, and building autonomous systems.">Blog</a>
+                    <a href="/youtube" class="mega-link" data-title="Walkthroughs & Live Builds" data-desc="Watch our engineers build live, break down complex AI agents, and give product deep-dives on our channel.">YouTube</a>
+                  </div>
+                </div>
+                <div class="mega-menu-right">
+                  <div class="mega-content">
+                    <h3 class="mega-title">"We partner with brands to move the world through tech, design and strategy."</h3>
+                    <p class="mega-desc">Dive into our field notes, video walkthroughs, and frameworks on AI-native operations to build a smarter future.</p>
+                  </div>
+                  <a href="/contact" class="btn-arrow mega-contact-btn">
+                    <span class="btn-label">Contact Us</span>
+                    <span class="btn-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="/about" class="nav-link">About <span class="nav-slash"></span></a>
+          </div>
+
+          <a href="/contact" class="btn-arrow nav-cta" id="navCta">
+            <span class="btn-label">Contact</span>
+            <span class="btn-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+
+          <button class="nav-hamburger" id="navHamburger" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- ========== CASE STUDY DETAIL CONTENT ========== -->
+      <main class="case-study-detail-page">
+        
+        <!-- Hero Section -->
+        <section class="cs-detail-hero">
+          <div class="cs-detail-hero-content">
+            <a href="/case-studies" class="cs-hero-breadcrumbs">&larr; All case studies</a>
+            <span class="cs-section-label" style="color: rgba(255,255,255,0.7); margin-bottom: 24px;">Healthcare & Medical Services - Case Study</span>
+            <h1 class="cs-hero-title">AI-Powered WhatsApp Medical Consultation Automation System</h1>
+            <p class="cs-hero-subtitle">How a multilingual, multimodal WhatsApp agent handles 200+ daily patient inquiries automatically, managing documents and CRM updates without manual staff involvement.</p>
+            
+            <div class="cs-hero-meta-grid">
+              <div class="cs-meta-block">
+                <span>Client</span>
+                <strong>Multi-Hospital Network</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Industry</span>
+                <strong>Healthcare</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Headline Result</span>
+                <strong class="highlight">24/7 Operations</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Main Body -->
+        <section class="cs-detail-wrapper">
+          <div class="cs-detail-grid">
+            
+            <!-- Sticky Sidebar (Receipts) -->
+            <aside class="cs-sticky-sidebar">
+              <div class="cs-receipts-box">
+                <h4 class="cs-receipts-title">Receipts</h4>
+                <div class="cs-receipt-item">
+                  <strong>Zero Manual Admin Work</strong>
+                  <p>100–200+ daily inquiries handled completely automatically.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Massive Scalability</strong>
+                  <p>System scales from 200 to 2000+ patients/day without additional staff.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Multi-Modal Accessibility</strong>
+                  <p>Supports English/Malayalam voice notes and document uploads natively in WhatsApp.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Organized Data</strong>
+                  <p>Doctors receive clean CRM data instead of scattered chats.</p>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Right Article Content -->
+            <article class="cs-article-content">
+              
+              <section>
+                <span class="cs-section-label">The Challenge</span>
+                <h2>Complex apps and websites were a barrier for the general population.</h2>
+                <p>A leading healthcare provider operating multiple hospitals across a major Indian region faced a critical challenge: patients needed a frictionless system to access medical consultation services. Their existing process required users to install apps or navigate complex websites, barriers that significantly reduced engagement, especially among the general population who prefer simple WhatsApp-based communication.</p>
+                <p>Managing 100–200+ daily inquiries manually was time-consuming and unsustainable. Scaling to 500–2000 daily inquiries would require a large team. Medical documents, voice notes, and text messages arrived scattered across channels, leading to manual data entry and inconsistent records.</p>
+              </section>
+
+              <section>
+                <span class="cs-section-label">The Solution</span>
+                <h2>A multilingual, multimodal WhatsApp automation system.</h2>
+                <p>A2B built a multilingual, multimodal WhatsApp automation system powered by n8n, Gemini AI, and WhatsApp Business API, enabling patients to start consultations instantly through text, voice, or document uploads. The solution handles 100–200+ daily inquiries automatically, manages medical documents, collects structured patient information, and logs everything into a centralized database, without any manual staff involvement.</p>
+
+                <h3>Phase 1: Multi-Modal Input Processing</h3>
+                <p><strong>Text & Voice Processing:</strong> Text messages are sent directly to the AI agent. Voice messages are downloaded from WhatsApp, transcribed to text using Gemini's audio API, and fed to the AI agent. Supports multilingual speech (English + Malayalam) enabling elderly users and patients with limited literacy to interact naturally.</p>
+                <p><strong>Document Management:</strong> Prescriptions, lab reports, PDFs, images, and scans trigger a dedicated document pipeline for storage, tracking, and patient record updates.</p>
+
+                <h3>Phase 2: Conversational AI Agent with Bilingual Support</h3>
+                <p><strong>Multilingual Support:</strong> Patients choose their language at the start, AI maintains it throughout the conversation, ensuring accessibility for all demographics in Kerala.</p>
+                <p><strong>Structured Data Collection:</strong> The AI captures name, age, symptoms, hospital preference, type of service, appointment preferences, and document status.</p>
+                <p><strong>Contextual Memory & Safety:</strong> The system retains the last 20 messages. The AI never gives medical advice, it only guides, collects data, clarifies queries, and prepares patient information for doctors.</p>
+                <h3>Phase 3: Automated Document Management & Response Delivery</h3>
+                <p>When patients share medical documents, files are downloaded from WhatsApp, uploaded to Google Drive, and links are generated for doctors. The patient database (Google Sheets) is updated, and the patient receives an acknowledgment message.</p>
+                <p>Based on conversation progress, professional WhatsApp messages are automatically sent in the patient's chosen language, providing next steps and offering hospital guidance. The automation eliminates manual data collection and transcription.</p>
+              </section>
+
+            </article>
+          </div>
+        </section>
+
+        <!-- Under the Hood (Architecture) -->
+        <section class="cs-under-the-hood">
+          <div class="cs-under-the-hood-container">
+            <h2>Under the hood.</h2>
+            <p>The system architecture and data flow for the Multimodal WhatsApp Consultation Pipeline using n8n and Gemini.</p>
+            <img src="/assets/casestudy/medical_con/medical_consultation_architecture.png" alt="System Architecture & Data Flow" />
+          </div>
+        </section>
+
+        <!-- Results Banner -->
+        <section class="cs-results-section">
+          <div class="cs-results-container">
+            <div class="cs-results-left">
+              <h2>Results.</h2>
+              <ul class="cs-results-list">
+                <li><i class="fa-solid fa-check"></i> <div><strong>10x Scalability</strong>, Handle more inquiries without adding staff</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>100%</strong>, Automated patient intake and document sorting</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Bilingual</strong>, Native support for English and Malayalam</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Frictionless</strong>, No app downloads or web portals needed</div></li>
+              </ul>
+            </div>
+            <div class="cs-results-right">
+              <div class="cs-results-card">
+                <div class="circle-decor"></div>
+                <h4>Bottom Line</h4>
+                <div class="huge-metric">24/7</div>
+                <p>Continuous AI-driven patient operations</p>
+                <a href="/contact">Want one of these? Book a call &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="cs-testimonial-section" style="padding: 100px 0; background-color: var(--bg-primary);">
+          <div class="cs-under-the-hood-container" style="text-align: center;">
+            <div class="circle-decor" style="margin: 0 auto 32px auto;"></div>
+            <blockquote style="font-family: var(--font-heading); font-size: 2.2rem; color: #fff; line-height: 1.4; margin-bottom: 32px; font-weight: 300;">
+              "Our client now operates an intelligent, fully automated medical consultation system that scales effortlessly. Patients get instant access to healthcare through their preferred channel, and the hospital network can handle 10x more inquiries without hiring additional staff."
+            </blockquote>
+            <footer style="color: var(--accent); font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">Healthcare Operations Team</footer>
+          </div>
+        </section>
+
+        <!-- More Work -->
+        <section class="cs-more-work">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-more-work-header">
+              <h2>More work.</h2>
+              <a href="/case-studies">View all case studies &rarr;</a>
+            </div>
+            <div class="cs-more-work-grid">
+              
+              <a href="/case-studies/sacred-text-publishing" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Religious & Education</span>
+                    <span>Content Generation</span>
+                  </div>
+                  <div class="cs-more-card-metric">100x</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">AI-Powered Religious Content Video Generator</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/knowledge-agent" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Enterprise</span>
+                    <span>Knowledge Management</span>
+                  </div>
+                  <div class="cs-more-card-metric">80%+</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">Multimodal AI Intake and Knowledge Agent</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/seo-reporting" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Marketing & SEO</span>
+                    <span>Automated Reporting</span>
+                  </div>
+                  <div class="cs-more-card-metric">99%</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">Automated SEO Reporting System</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Final CTA (Surprise Section) -->
+        <section class="cs-ai-native-cta">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-ai-native-box">
+              <div class="circle-decor-large"></div>
+              <h2>Ready to become<br>AI-Native?</h2>
+              <p>Book a 30-minute conversation. We'll map the highest-leverage workflows in your business and tell you whether AI is the right answer.</p>
+              <a href="/contact" class="btn-arrow">
+                <span class="btn-label">Free consultancy</span>
+                <span class="btn-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ========== FOOTER ========== -->
+      <footer class="site-footer" id="footer">
+        <div class="footer-container">
+          <div class="footer-inner">
+            
+            <div class="footer-top-right">
+              <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/a2bai" target="_blank" rel="noopener" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/a2bai.tech" target="_blank" rel="noopener" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCOr8E2dKBEP6wZI3j19tlaw" target="_blank" rel="noopener" class="social-link"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-content">
+              <div class="footer-cta">
+                <div class="footer-logo-hex">
+                  <img src="/assets/logos/a2blogowhite.png" alt="A2B Logo" />
+                </div>
+                <h2 class="footer-title">A2B AI Technologies™</h2>
+                <p class="footer-desc">An elite AI agency helping you build a smarter future through Agentic Coding, AI Workflows, and Enterprise Automation.</p>
+                
+                <a href="/contact" class="btn-arrow footer-btn">
+                  <span class="btn-label">Free consultancy</span>
+                  <div class="btn-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </a>
+
+                <hr class="footer-divider" />
+                
+                <div class="footer-contact-info">
+                  <a href="mailto:a2b.business.official@gmail.com" class="footer-email">a2b.business.official@gmail.com</a>
+                  <p class="footer-location">Trivandrum · Kerala · India</p>
+                </div>
+              </div>
+
+              <div class="footer-links-wrapper">
+                <div class="footer-link-col">
+                  <h4 class="footer-col-title">Services</h4>
+                  <a href="#">AI Strategy</a>
+                  <a href="#">Agentic Coding</a>
+                </div>
+                <div class="footer-link-col">
+                  <h4 class="footer-col-title">Useful Links</h4>
+                  <a href="/contact">Contact Us</a>
+                  <a href="/case-studies">Case Studies</a>
+                </div>
+                <div class="footer-link-col">
+                  <h4 class="footer-col-title">Company</h4>
+                  <a href="/about">About</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="footer-bottom">
+              <div class="footer-copyright">
+                ©2026 A2B AI Technologies
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

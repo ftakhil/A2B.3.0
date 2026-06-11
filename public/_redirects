@@ -1,0 +1,25 @@
+# Redirect old .html URLs to clean URLs (301 = permanent, preserves SEO ranking)
+/service.html           /service                301
+/about.html             /about                  301
+/contact.html           /contact                301
+/product.html           /product                301
+/blog.html              /blog                   301
+/case-study.html        /case-studies           301
+
+/services/ai-automation.html    /services/ai-automation    301
+/services/ai-agents.html        /services/ai-agents        301
+/services/custom-ai.html        /services/custom-ai        301
+/services/ai-strategy.html      /services/ai-strategy      301
+/services/enterprise-ai.html    /services/enterprise-ai    301
+
+/products/ztrike.html           /products/ztrike           301
+/products/roastmysnap.html      /products/roastmysnap      301
+/products/gitart.html           /products/gitart           301
+
+/case-studies/visual-brand-intelligence.html    /case-studies/visual-brand-intelligence    301
+/case-studies/seo-reporting.html                /case-studies/seo-reporting                301
+/case-studies/sacred-text-publishing.html       /case-studies/sacred-text-publishing       301
+/case-studies/reddit-youtube.html               /case-studies/reddit-youtube               301
+/case-studies/medical-consultation.html         /case-studies/medical-consultation         301
+/case-studies/knowledge-agent.html              /case-studies/knowledge-agent              301
+/case-studies/image-generation.html             /case-studies/image-generation             301

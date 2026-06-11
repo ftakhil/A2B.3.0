@@ -1,0 +1,369 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A2B Case Study - Sacred Text Publishing | AI-Powered Religious Content Video Generator" />
+    <title>Sacred Text Publishing | A2B AI Technologies</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+
+      <!-- ========== NAVBAR ========== -->
+      <nav class="navbar" id="navbar">
+        <div class="nav-container">
+          <a href="/" class="nav-logo" aria-label="A2B Home">
+            <img src="/assets/logos/a2blogowhite.png" alt="A2B Logo" class="nav-logo-img" width="42" height="42" />
+            <span class="nav-logo-text">A2B</span>
+          </a>
+
+          <div class="nav-links" id="navLinks">
+            <a href="/" class="nav-link">Home <span class="nav-slash"></span></a>
+            <a href="/product" class="nav-link">Product <span class="nav-slash"></span></a>
+            <a href="/service" class="nav-link">Service <span class="nav-slash"></span></a>
+            <a href="/case-studies" class="nav-link active">Case Study <span class="nav-slash"></span></a>
+            <div class="nav-dropdown-wrapper" id="resourcesDropdown">
+              <button class="nav-link nav-dropdown-btn">Resources <span class="nav-slash"></span></button>
+              <div class="nav-dropdown-menu mega-menu">
+                <div class="mega-menu-left">
+                  <div class="mega-menu-label">
+                    <svg width="12" height="12" viewBox="0 0 44 44" fill="var(--accent)" xmlns="http://www.w3.org/2000/svg">
+                      <polygon points="22,1 43,11 43,33 22,43 1,33 1,11" />
+                    </svg>
+                    RESOURCES
+                  </div>
+                  <div class="mega-links">
+                    <a href="/blog" class="mega-link" data-title="Field notes & Breakdowns" data-desc="Read our latest articles on agentic workflows, enterprise AI strategy, and building autonomous systems.">Blog</a>
+                    <a href="/youtube" class="mega-link" data-title="Walkthroughs & Live Builds" data-desc="Watch our engineers build live, break down complex AI agents, and give product deep-dives on our channel.">YouTube</a>
+                  </div>
+                </div>
+                <div class="mega-menu-right">
+                  <div class="mega-content">
+                    <h3 class="mega-title">“We partner with brands to move the world through tech, design and strategy.”</h3>
+                    <p class="mega-desc">Dive into our field notes, video walkthroughs, and frameworks on AI-native operations to build a smarter future.</p>
+                  </div>
+                  <a href="/contact" class="btn-arrow mega-contact-btn">
+                    <span class="btn-label">Contact Us</span>
+                    <span class="btn-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="/about" class="nav-link">About <span class="nav-slash"></span></a>
+          </div>
+
+          <a href="/contact" class="btn-arrow nav-cta" id="navCta">
+            <span class="btn-label">Contact</span>
+            <span class="btn-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+
+          <button class="nav-hamburger" id="navHamburger" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- ========== CASE STUDY DETAIL CONTENT ========== -->
+      <main class="case-study-detail-page">
+        
+        <!-- Hero Section -->
+        <section class="cs-detail-hero">
+          <div class="cs-detail-hero-content">
+            <a href="/case-studies" class="cs-hero-breadcrumbs">&larr; All case studies</a>
+            <span class="cs-section-label" style="color: rgba(255,255,255,0.7); margin-bottom: 24px;">Religious & Educational Content - Case Study</span>
+            <h1 class="cs-hero-title">AI-Powered Religious Content Video Generator</h1>
+            <p class="cs-hero-subtitle">How we transformed the complete 1,500-page Sri Guru Granth Sahib into engaging social media videos using intelligent OCR and custom Python video generation.</p>
+            
+            <div class="cs-hero-meta-grid">
+              <div class="cs-meta-block">
+                <span>Client</span>
+                <strong>Sacred Text Publishing</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Industry</span>
+                <strong>Religious Content</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Headline Result</span>
+                <strong class="highlight">100x Faster</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Main Body -->
+        <section class="cs-detail-wrapper">
+          <div class="cs-detail-grid">
+            
+            <!-- Sticky Sidebar (Receipts) -->
+            <aside class="cs-sticky-sidebar">
+              <div class="cs-receipts-box">
+                <h4 class="cs-receipts-title">Receipts</h4>
+                <div class="cs-receipt-item">
+                  <strong>100x Faster Processing</strong>
+                  <p>Reduced 1,500-page processing from months/years to hours.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Zero Per-Video Cost</strong>
+                  <p>Eliminated thousands of dollars in commercial API fees through local processing.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>1-1.5 Minutes/Video</strong>
+                  <p>What took days per video manually is now generated almost instantly.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Infinite Scalability</strong>
+                  <p>Can process unlimited texts with the same architecture.</p>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Right Article Content -->
+            <article class="cs-article-content">
+              
+              <section>
+                <span class="cs-section-label">The Challenge</span>
+                <h2>Manual video creation would require months or years of work.</h2>
+                <p>A religious content organization approached a2b with an ambitious mission: transform the complete 1,500-page Sri Guru Granth Sahib, a sacred Gurmukhi text into engaging social media videos for educational outreach to younger generations. Each sentence needed to be presented as both a verse video (original Gurmukhi text) and an explanation video (with meaning), creating thousands of unique animated videos.</p>
+                <p>The challenge was formidable. Manual video creation would require months or years of work. External video generation APIs like Veo or similar services would cost thousands of dollars for this volume. The client needed a solution that was fast, cost-effective, and maintained the sacred text's integrity while creating visually compelling content suitable for Instagram, YouTube, and other social platforms.</p>
+              </section>
+
+              <section>
+                <span class="cs-section-label">The Solution</span>
+                <h2>A fully automated, zero cost per video solution running completely locally.</h2>
+                <p>a2b delivered a fully automated, zero cost per video solution using n8n workflow orchestration, Gemini AI for intelligent OCR, and custom Python based video generation with FFmpeg. The system processes the entire PDF, extracts and structures content with AI precision, and generates professionally animated videos with culturally appropriate visual styling all running locally with no recurring API costs.</p>
+                
+                <div class="cs-article-image-wrapper">
+                  <img src="/assets/casestudy/SacredTextPublishing/image1.webp" alt="Sacred Text Publishing AI System" />
+                  <figcaption>Sacred Text Publishing AI System</figcaption>
+                </div>
+
+                <h3>Phase 1: Intelligent PDF Processing & Content Extraction</h3>
+                <p><strong>Google Sheets Naming System:</strong> The workflow begins by checking a centralized Google Sheet that tracks video generation progress. This naming registry prevents file conflicts when processing multiple PDFs through the same workflow. Each time the system runs, it reads the current counter value, uses it for sequential file naming, and increments the counter for the next execution.</p>
+                <p><strong>Gemini AI OCR with Gurmukhi Intelligence:</strong> The system leverages Google's Gemini AI specifically for its superior understanding of Gurmukhi script and context. Unlike generic OCR tools, Gemini doesn't just extract text, it semantically understands the religious verses and their explanations, returning structured JSON that separates the original verse from its meaning.</p>
+                <p><strong>JavaScript Data Cleansing:</strong> A Code node (JavaScript) receives Gemini's JSON output and performs specialized data cleaning. It strips formatting artifacts, normalizes Gurmukhi characters, validates structure, and prepares two distinct data payloads: one for verse videos and one for explanation videos.</p>
+
+                <h3>Phase 2: Dual-Path Video Generation System</h3>
+                <p>When processing original Gurmukhi verses, the system creates videos with a distinctive golden glowing effect that reflects the sacred nature of the text. The Python script utilizes FFmpeg to:</p>
+                <ul>
+                  <li>Render Gurmukhi text using locally installed fonts (ensuring proper script rendering)</li>
+                  <li>Apply a golden color scheme with animated glow effects</li>
+                  <li>Create smooth text animations optimized for social media viewing</li>
+                  <li>Generate MP4 files with platform-appropriate dimensions and quality</li>
+                </ul>
+
+                <p>For explanation content (meanings and interpretations), the system generates a parallel video with a contrasting visual style:</p>
+                <ul>
+                  <li>Black highlight treatment for enhanced readability</li>
+                  <li>Clean, modern typography suitable for educational content</li>
+                  <li>Same technical animation quality with different color psychology</li>
+                  <li>Maintains consistency in pacing and duration with verse videos</li>
+                </ul>
+                <h3>Phase 3: Progress Tracking & Loop Management</h3>
+                <p>After both verse and explanation videos are generated, the workflow updates the Google Sheets counter automatically. This creates a persistent state that survives workflow restarts, enables batch processing of large PDFs in manageable chunks, and provides real-time progress tracking.</p>
+              </section>
+
+            </article>
+          </div>
+        </section>
+
+        <!-- Under the Hood (Architecture) -->
+        <section class="cs-under-the-hood">
+          <div class="cs-under-the-hood-container">
+            <h2>Under the hood.</h2>
+            <p>The automated n8n pipeline behind the Sacred Text generation, from intelligent PDF ingestion and semantic meaning extraction, through the parallel Python/FFmpeg video generation branches.</p>
+            <img src="/assets/casestudy/SacredTextPublishing/img2.webp" alt="Architecture Diagram" />
+          </div>
+        </section>
+
+        <!-- Results Banner -->
+        <section class="cs-results-section">
+          <div class="cs-results-container">
+            <div class="cs-results-left">
+              <h2>Results.</h2>
+              <ul class="cs-results-list">
+                <li><i class="fa-solid fa-check"></i> <div><strong>100x</strong>, Faster processing of 1,500-page text</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Zero</strong>, Marginal cost per generated video</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>100%</strong>, Semantic accuracy using Gemini Gurmukhi parsing</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Infinite</strong>, Scalability across unlimited religious texts</div></li>
+              </ul>
+            </div>
+            <div class="cs-results-right">
+              <div class="cs-results-card">
+                <div class="circle-decor"></div>
+                <h4>Bottom Line</h4>
+                <div class="huge-metric">100x</div>
+                <p>Faster processing speed</p>
+                <a href="/contact">Want one of these? Book a call &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="cs-testimonial-section" style="padding: 100px 0; background-color: var(--bg-primary);">
+          <div class="cs-under-the-hood-container" style="text-align: center;">
+            <div class="circle-decor" style="margin: 0 auto 32px auto;"></div>
+            <blockquote style="font-family: var(--font-heading); font-size: 2.2rem; color: #fff; line-height: 1.4; margin-bottom: 32px; font-weight: 300;">
+              "The organization's feedback was unequivocal: they were 'amazed' by the system's capability and the astronomical time savings. What once seemed like an insurmountable challenge, bringing sacred 1,500-page texts to social media, is now as simple as uploading a PDF and pressing a button."
+            </blockquote>
+            <footer style="color: var(--accent); font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">Organization Director</footer>
+          </div>
+        </section>
+
+        <!-- More Work -->
+        <section class="cs-more-work">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-more-work-header">
+              <h2>More work.</h2>
+              <a href="/case-studies">View all case studies &rarr;</a>
+            </div>
+            <div class="cs-more-work-grid">
+              
+              <a href="/case-studies/medical-consultation" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Medical</span>
+                    <span>Automated Intake</span>
+                  </div>
+                  <div class="cs-more-card-metric">24/7</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">AI-Powered WhatsApp Medical Consultation Automation</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/image-generation" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Creative</span>
+                    <span>Image Generation</span>
+                  </div>
+                  <div class="cs-more-card-metric">1000+</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">AI-Powered Brand-Style Image Generation System</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/reddit-youtube" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Media</span>
+                    <span>Video Automation</span>
+                  </div>
+                  <div class="cs-more-card-metric">Zero</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">Reddit-to-YouTube Automation</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Final CTA (Surprise Section) -->
+        <section class="cs-ai-native-cta">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-ai-native-box">
+              <div class="circle-decor-large"></div>
+              <h2>Ready to become<br>AI-Native?</h2>
+              <p>Book a 30-minute conversation. We'll map the highest-leverage workflows in your business and tell you whether AI is the right answer.</p>
+              <a href="/contact" class="btn-arrow">
+                <span class="btn-label">Free consultancy</span>
+                <span class="btn-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ========== FOOTER ========== -->
+      <footer class="site-footer" id="footer">
+        <div class="footer-container">
+          <div class="footer-inner">
+            
+            <div class="footer-top-right">
+              <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/a2bai" target="_blank" rel="noopener" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/a2bai.tech" target="_blank" rel="noopener" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCOr8E2dKBEP6wZI3j19tlaw" target="_blank" rel="noopener" class="social-link"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-content">
+              <div class="footer-cta">
+                <div class="footer-logo-hex">
+                  <img src="/assets/logos/a2blogowhite.png" alt="A2B Logo" />
+                </div>
+                <h2 class="footer-title">A2B AI Technologies™</h2>
+                <p class="footer-desc">An elite AI agency helping you build a smarter future through Agentic Coding, AI Workflows, and Enterprise Automation.</p>
+                
+                <a href="/contact" class="btn-arrow footer-btn">
+                  <span class="btn-label">Free consultancy</span>
+                  <div class="btn-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </a>
+
+                <hr class="footer-divider" />
+                
+                <div class="footer-contact-info">
+                  <a href="mailto:a2b.business.official@gmail.com" class="footer-email">a2b.business.official@gmail.com</a>
+                  <p class="footer-location">Trivandrum · Kerala · India</p>
+                </div>
+              </div>
+
+              <div class="footer-links-wrapper">
+                <div class="footer-link-col">
+                  <h4 class="footer-col-title">Services</h4>
+                  <a href="#">AI Strategy</a>
+                  <a href="#">Agentic Coding</a>
+                </div>
+                <div class="footer-link-col">
+                  <h4 class="footer-col-title">Useful Links</h4>
+                  <a href="/contact">Contact Us</a>
+                  <a href="/case-studies">Case Studies</a>
+                </div>
+                <div class="footer-link-col">
+                  <h4 class="footer-col-title">Company</h4>
+                  <a href="/about">About</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="footer-bottom">
+              <div class="footer-copyright">
+                ©2026 A2B AI Technologies
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

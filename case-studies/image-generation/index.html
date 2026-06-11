@@ -1,0 +1,347 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A2B Case Study - AI-Powered Brand-Style Image Generation System for Premium Creative Agency" />
+    <title>Brand-Style Image Generation | A2B AI Technologies</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+
+      <!-- ========== NAVBAR ========== -->
+      <nav class="navbar" id="navbar">
+        <div class="nav-container">
+          <a href="/" class="nav-logo" aria-label="A2B Home">
+            <img src="/assets/logos/a2blogowhite.png" alt="A2B Logo" class="nav-logo-img" width="42" height="42" />
+            <span class="nav-logo-text">A2B</span>
+          </a>
+          <div class="nav-links" id="navLinks">
+            <a href="/" class="nav-link">Home <span class="nav-slash"></span></a>
+            <a href="/product" class="nav-link">Product <span class="nav-slash"></span></a>
+            <a href="/service" class="nav-link">Service <span class="nav-slash"></span></a>
+            <a href="/case-studies" class="nav-link active">Case Study <span class="nav-slash"></span></a>
+            <div class="nav-dropdown-wrapper" id="resourcesDropdown">
+              <button class="nav-link nav-dropdown-btn">Resources <span class="nav-slash"></span></button>
+              <div class="nav-dropdown-menu mega-menu">
+                <div class="mega-menu-left">
+                  <div class="mega-menu-label">
+                    <svg width="12" height="12" viewBox="0 0 44 44" fill="var(--accent)" xmlns="http://www.w3.org/2000/svg">
+                      <polygon points="22,1 43,11 43,33 22,43 1,33 1,11" />
+                    </svg>
+                    RESOURCES
+                  </div>
+                  <div class="mega-links">
+                    <a href="/blog" class="mega-link" data-title="Field notes & Breakdowns" data-desc="Read our latest articles on agentic workflows, enterprise AI strategy, and building autonomous systems.">Blog</a>
+                    <a href="/youtube" class="mega-link" data-title="Walkthroughs & Live Builds" data-desc="Watch our engineers build live, break down complex AI agents, and give product deep-dives on our channel.">YouTube</a>
+                  </div>
+                </div>
+                <div class="mega-menu-right">
+                  <div class="mega-content">
+                    <h3 class="mega-title">"We partner with brands to move the world through tech, design and strategy."</h3>
+                    <p class="mega-desc">Dive into our field notes, video walkthroughs, and frameworks on AI-native operations to build a smarter future.</p>
+                  </div>
+                  <a href="/contact" class="btn-arrow mega-contact-btn">
+                    <span class="btn-label">Contact Us</span>
+                    <span class="btn-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="/about" class="nav-link">About <span class="nav-slash"></span></a>
+          </div>
+          <a href="/contact" class="btn-arrow nav-cta" id="navCta">
+            <span class="btn-label">Contact</span>
+            <span class="btn-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+          <button class="nav-hamburger" id="navHamburger" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- ========== CASE STUDY DETAIL CONTENT ========== -->
+      <main class="case-study-detail-page">
+        
+        <!-- Hero Section -->
+        <section class="cs-detail-hero">
+          <div class="cs-detail-hero-content">
+            <a href="/case-studies" class="cs-hero-breadcrumbs">&larr; All case studies</a>
+            <span class="cs-section-label" style="color: rgba(255,255,255,0.7); margin-bottom: 24px;">Creative & Brand Design - Case Study</span>
+            <h1 class="cs-hero-title">AI-Powered Brand-Style Image Generation System</h1>
+            <p class="cs-hero-subtitle">How a custom AI pipeline learns a brand's aesthetic DNA to generate unlimited, perfectly consistent cinematic images on demand.</p>
+            
+            <div class="cs-hero-meta-grid">
+              <div class="cs-meta-block">
+                <span>Client</span>
+                <strong>Premium Creative Agency</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Industry</span>
+                <strong>Creative & Design</strong>
+              </div>
+              <div class="cs-meta-block">
+                <span>Headline Result</span>
+                <strong class="highlight">1000+ images/day</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Main Body -->
+        <section class="cs-detail-wrapper">
+          <div class="cs-detail-grid">
+            
+            <!-- Sticky Sidebar (Receipts) -->
+            <aside class="cs-sticky-sidebar">
+              <div class="cs-receipts-box">
+                <h4 class="cs-receipts-title">Receipts</h4>
+                <div class="cs-receipt-item">
+                  <strong>Zero Manual Effort</strong>
+                  <p>Style extraction and camera logic are handled completely automatically.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Perfect Consistency</strong>
+                  <p>Every output carries the same "old-money, generational wealth" aesthetic.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Unlimited Scalability</strong>
+                  <p>Teams can generate 1000+ images/day with zero additional cost.</p>
+                </div>
+                <div class="cs-receipt-item">
+                  <strong>Unified Brand Language</strong>
+                  <p>Ensures the brand's entire catalog looks handcrafted by one creative director.</p>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Right Article Content -->
+            <article class="cs-article-content">
+              
+              <section>
+                <span class="cs-section-label">The Challenge</span>
+                <h2>Replicating lighting language and texture identity was inconsistent.</h2>
+                <p>A fast-growing creative brand needed a way to generate unlimited on-brand images without manually crafting style prompts for every request. Their design team had built a signature visual identity across 15+ reference images but replicating that same cinematography, lighting language, and texture identity was inconsistent and time-consuming.</p>
+                <p>They wanted a solution that could learn the brand's style, store it, and automatically apply it to any new user-generated prompt, all while maintaining aesthetic consistency, camera logic, and the brand's "old-money, luxury, retro" vibe.</p>
+              </section>
+
+              <section>
+                <span class="cs-section-label">The Solution</span>
+                <h2>A fully automated style-extraction and generation engine.</h2>
+                <p>Our team built a fully automated style-extraction and image-generation engine powered by n8n, Gemini AI, Supabase, and multi-model image generation APIs, delivering 100% consistent brand-style images on demand.</p>
+
+                <h3>Phase 1: Perfect Style Extraction</h3>
+                <p>The system ingests 15+ reference images and performs deep cinematic style extraction using Gemini's multimodal capabilities, focusing on:</p>
+                <ul>
+                  <li><strong>High-precision camera logic breakdown:</strong> Lens compression, framing rhythm, angle behavior, bloom, contrast physics.</li>
+                  <li><strong>Lighting identity analysis:</strong> Warm sunset hues, side-lit highlights, retro glow falloff.</li>
+                  <li><strong>Texture & material fingerprinting:</strong> Wood varnish details, fabric tension, micro-scratches, oil-sheen physics.</li>
+                  <li><strong>Imperfection pattern capture:</strong> Analog dust, chromatic fringe, bloom leaks, atmospheric haze.</li>
+                </ul>
+                <p>Each extracted style is stored in Supabase as structured text linked to the image filename, creating a permanent repository of the brand's aesthetic DNA.</p>
+
+                <h3>Phase 2: Object Recognition for Context Matching</h3>
+                <p>When a user submits a prompt, the system automatically scans the entire stored dataset, finds the closest matching reference image, and extracts its semantic content. It returns the best-aligned style description ensuring every new output matches the correct style segment.</p>
+
+
+                <h3>Phase 3: Final Image Generation Engine</h3>
+                <p>The system merges the user prompt, matching style, aesthetic motifs, imperfection profile, camera DNA, and lighting rules into a single Alpha-Prompt.</p>
+                <p>This Alpha-Prompt is sent simultaneously to multiple models (Gemini 2.5 Flash, Imagen 4, Nano Banana Pro, Ideogram V3, Grok Imagine). Each model returns a variation with the same brand identity preserved, and the best output(s) are uploaded to Google Drive automatically.</p>
+              </section>
+
+            </article>
+          </div>
+        </section>
+
+        <!-- Under the Hood (Architecture) -->
+        <section class="cs-under-the-hood">
+          <div class="cs-under-the-hood-container">
+            <h2>Under the hood.</h2>
+            <p>The automated n8n workflow implementing the Alpha-Prompt engineering and multi-model generation pipeline.</p>
+            <img src="/assets/casestudy/imagegeneration/image_n8n.jpg" alt="n8n Workflow Implementation" />
+          </div>
+        </section>
+
+        <!-- Results Banner -->
+        <section class="cs-results-section">
+          <div class="cs-results-container">
+            <div class="cs-results-left">
+              <h2>Results.</h2>
+              <ul class="cs-results-list">
+                <li><i class="fa-solid fa-check"></i> <div><strong>100%</strong>, Consistent brand aesthetic in every output</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>1000+</strong>, Images generated per day at scale</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Multi-Model</strong>, Resilient parallel generation pipeline</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Zero</strong>, Guesswork required by the design team</div></li>
+              </ul>
+            </div>
+            <div class="cs-results-right">
+              <div class="cs-results-card">
+                <div class="circle-decor"></div>
+                <h4>Bottom Line</h4>
+                <div class="huge-metric">1000+</div>
+                <p>Brand-perfect images per day</p>
+                <a href="/contact">Want one of these? Book a call &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="cs-testimonial-section" style="padding: 100px 0; background-color: var(--bg-primary);">
+          <div class="cs-under-the-hood-container" style="text-align: center;">
+            <div class="circle-decor" style="margin: 0 auto 32px auto;"></div>
+            <blockquote style="font-family: var(--font-heading); font-size: 2.2rem; color: #fff; line-height: 1.4; margin-bottom: 32px; font-weight: 300;">
+              "This system transforms brand image generation from a bottleneck into an infinite-capacity automation engine, preserving creative vision while enabling unlimited production at zero additional cost."
+            </blockquote>
+            <footer style="color: var(--accent); font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">Creative Direction Team</footer>
+          </div>
+        </section>
+
+        <!-- More Work -->
+        <section class="cs-more-work">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-more-work-header">
+              <h2>More work.</h2>
+              <a href="/case-studies">View all case studies &rarr;</a>
+            </div>
+            <div class="cs-more-work-grid">
+              
+              <a href="/case-studies/sacred-text-publishing" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Religious & Education</span>
+                    <span>Content Generation</span>
+                  </div>
+                  <div class="cs-more-card-metric">100x</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">AI-Powered Religious Content Video Generator</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/medical-consultation" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Healthcare</span>
+                    <span>Automated Intake</span>
+                  </div>
+                  <div class="cs-more-card-metric">24/7</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">AI-Powered WhatsApp Medical Consultation</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+              <a href="/case-studies/reddit-youtube" class="cs-more-card">
+                <div class="cs-more-card-top">
+                  <div class="cs-more-card-meta">
+                    <span>Media</span>
+                    <span>Video Automation</span>
+                  </div>
+                  <div class="cs-more-card-metric">Zero</div>
+                </div>
+                <div class="cs-more-card-bottom">
+                  <h3 class="cs-more-card-title">Reddit-to-YouTube Automation</h3>
+                  <span class="cs-more-card-link">View case study &rarr;</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Final CTA (Surprise Section) -->
+        <section class="cs-ai-native-cta">
+          <div class="cs-under-the-hood-container">
+            <div class="cs-ai-native-box">
+              <div class="circle-decor-large"></div>
+              <h2>Ready to become<br>AI-Native?</h2>
+              <p>Book a 30-minute conversation. We'll map the highest-leverage workflows in your business and tell you whether AI is the right answer.</p>
+              <a href="/contact" class="btn-arrow">
+                <span class="btn-label">Free consultancy</span>
+                <span class="btn-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ========== FOOTER ========== -->
+      <footer class="site-footer" id="footer">
+        <div class="footer-container">
+          <div class="footer-inner">
+            <div class="footer-top-right">
+              <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/a2bai" target="_blank" rel="noopener" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/a2bai.tech" target="_blank" rel="noopener" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCOr8E2dKBEP6wZI3j19tlaw" target="_blank" rel="noopener" class="social-link"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="footer-content">
+              <div class="footer-cta">
+                <div class="footer-logo-hex">
+                  <img src="/assets/logos/a2blogowhite.png" alt="A2B Logo" />
+                </div>
+                <h2 class="footer-title">A2B AI Technologies™</h2>
+                <p class="footer-desc">An elite AI agency helping you build a smarter future through Agentic Coding, AI Workflows, and Enterprise Automation.</p>
+                <a href="/contact" class="btn-arrow footer-btn">
+                  <span class="btn-label">Free consultancy</span>
+                  <div class="btn-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </a>
+                <hr class="footer-divider" />
+                <div class="footer-contact-info">
+                  <a href="mailto:a2b.business.official@gmail.com" class="footer-email">a2b.business.official@gmail.com</a>
+                  <p class="footer-location">Trivandrum · Kerala · India</p>
+                </div>
+              </div>
+              <div class="footer-links-wrapper">
+                <div class="footer-link-col">
+                  <h4 class="footer-col-title">Services</h4>
+                  <a href="#">AI Strategy</a>
+                  <a href="#">Agentic Coding</a>
+                </div>
+                <div class="footer-link-col">
+                  <h4 class="footer-col-title">Useful Links</h4>
+                  <a href="/contact">Contact Us</a>
+                  <a href="/case-studies">Case Studies</a>
+                </div>
+                <div class="footer-link-col">
+                  <h4 class="footer-col-title">Company</h4>
+                  <a href="/about">About</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <div class="footer-copyright">
+                ©2026 A2B AI Technologies
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

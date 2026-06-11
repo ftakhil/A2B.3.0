@@ -50,14 +50,33 @@ function initMobileMenu() {
     const isOpen = hamburger.classList.toggle('active');
     navLinks.classList.toggle('mobile-open');
     document.body.classList.toggle('no-scroll', isOpen);
+    // Collapse all sub-menus when closing the hamburger
+    if (!isOpen) {
+      navLinks.querySelectorAll('.nav-dropdown-wrapper').forEach(w => w.classList.remove('open'));
+    }
   });
 
-  // Close menu when a link is clicked
+  // Close menu when a nav link is clicked (but not dropdown toggle buttons on mobile)
   navLinks.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
+      if (link.classList.contains('nav-dropdown-btn') && window.innerWidth <= 768) return;
       hamburger.classList.remove('active');
       navLinks.classList.remove('mobile-open');
       document.body.classList.remove('no-scroll');
+    });
+  });
+
+  // Mobile: toggle inline sub-menus on dropdown button click
+  navLinks.querySelectorAll('.nav-dropdown-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (window.innerWidth > 768) return;
+      const wrapper = btn.closest('.nav-dropdown-wrapper');
+      if (!wrapper) return;
+      // Collapse sibling dropdowns
+      navLinks.querySelectorAll('.nav-dropdown-wrapper').forEach(w => {
+        if (w !== wrapper) w.classList.remove('open');
+      });
+      wrapper.classList.toggle('open');
     });
   });
 }
@@ -432,7 +451,7 @@ function initFreeConsultationButton() {
   if (window.location.pathname.includes('contact')) return;
 
   const circle = document.createElement('a');
-  circle.href = '/contact.html';
+  circle.href = '/contact';
   circle.className = 'fcb-circle';
   circle.setAttribute('aria-label', 'Book your free consultancy');
 
@@ -463,21 +482,48 @@ function initFreeConsultationButton() {
   document.body.appendChild(circle);
 }
 
-/**
- * Hero Lottie animation — loads and plays heroanimation.json in the right column.
- */
+
 async function initHeroAnimation() {
-  const container = document.getElementById('heroAnimation');
-  if (!container) return;
+  const treesEl = document.getElementById('heroTrees');
+  const balloonEl = document.getElementById('heroBalloon');
+  if (!treesEl && !balloonEl) return;
 
-  const lottie = (await import('lottie-web')).default;
+  const [lottie, resp] = await Promise.all([
+    import('lottie-web').then(m => m.default),
+    fetch('/assets/hero/heroanime.json').then(r => r.json()),
+  ]);
 
-  lottie.loadAnimation({
-    container,
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: '/assets/hero/herotreeanime.json',
+  if (treesEl) {
+    const treesData = { ...resp, layers: resp.layers.filter(l => l.nm !== 'balon.png') };
+    lottie.loadAnimation({ container: treesEl, renderer: 'svg', loop: true, autoplay: true, animationData: treesData });
+  }
+
+  if (balloonEl) {
+    const balloonData = { ...resp, layers: resp.layers.filter(l => l.nm === 'balon.png') };
+    lottie.loadAnimation({ container: balloonEl, renderer: 'svg', loop: true, autoplay: true, animationData: balloonData });
+  }
+}
+
+/**
+ * Footer accordion — collapses link columns on mobile.
+ * Wraps each column's <a> links in a .footer-col-links div and
+ * toggles max-height via the .open class on the column.
+ */
+function initFooterAccordion() {
+  document.querySelectorAll('.footer-link-col').forEach(col => {
+    const title = col.querySelector('.footer-col-title');
+    const links = Array.from(col.querySelectorAll('a'));
+    if (!title || !links.length) return;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'footer-col-links';
+    links.forEach(a => wrap.appendChild(a));
+    col.appendChild(wrap);
+
+    title.addEventListener('click', () => {
+      if (window.innerWidth > 768) return;
+      col.classList.toggle('open');
+    });
   });
 }
 
@@ -496,4 +542,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initFreeConsultationButton();
   initHeroAnimation();
+  initFooterAccordion();
 });
