@@ -1621,6 +1621,11 @@ a.cinfo-line:hover {
     width: 40px;
     height: 36px;
   }
+
+  /* Hide text-only secondary CTA on mobile (home + about hero) */
+  .hero-case-study {
+    display: none;
+  }
 }
 
 /* Small phones — container padding only, nothing that changes Pixel 7 (412px) layout */
@@ -1644,30 +1649,25 @@ a.cinfo-line:hover {
 
 /* iPhone SE and smaller ONLY (≤400px — Pixel 7 is 412px, untouched) */
 @media (max-width: 400px) {
-  /* 2/3 screen fill — mirrors Pixel 7 proportionally */
+  /* 2/3 screen fill — larger heading fills the vertical space */
   .hero {
     min-height: 68vh;
     min-height: 68svh;
   }
 
-  /* Tighter padding so content area is larger within the shorter hero */
   .hero-container {
-    padding-top: calc(var(--nav-height) + 24px);
+    padding-top: calc(var(--nav-height) + 28px);
     padding-bottom: 40px;
   }
 
-  /* Fixed gap layout: label/heading/pills grouped at top, buttons pinned to bottom */
+  /* space-between: ~22px gaps between label / heading / pills / button */
   .hero-content {
-    justify-content: flex-start;
-    gap: 32px;
+    justify-content: space-between;
   }
 
-  .hero-actions {
-    margin-top: auto; /* push buttons to bottom of hero content */
-  }
-
+  /* 13.5vw at 375px ≈ 50.6px — forces "Your AI / partner for / the [word]" 3-row wrap */
   .hero-heading {
-    font-size: clamp(2.2rem, 9vw, 3rem);
+    font-size: clamp(3rem, 13.5vw, 5rem);
     line-height: 1.15;
     overflow: hidden;
     margin-bottom: 0;
